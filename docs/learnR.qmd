@@ -37,7 +37,8 @@ library(tidyverse)
 
 ## summarise
 
-To study these five verbs, I am going to work with a very simple data. We shall use it for big data later on once you understand these `5 verbs`.
+To study these five verbs, I am going to work with a very simple data. We shall use it for big data later on once you understand these `5 verbs`. 
+**All the next stuff is discussed in this video** {{< video https://youtu.be/dpIYsMRDWks >}}
 
 Here's the dataframe that we'll analyze in this exercise. This type of data can also be directly imported from `excel` ,`csv` ,`stata`, `spss` and other softwares in R. But at the moment I have data entered in R. Each variable is a `vector`. `name`, `school`, `teacher` are `character` vectors while others are numeric. When one has mixture of numeric, character, factor vectors combined, its called data frame or we shall use term `tibble` which is just a better display of `data frame`.
 
