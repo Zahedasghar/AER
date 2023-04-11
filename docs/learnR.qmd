@@ -13,7 +13,8 @@ execute:
 
 # Getting started
 
-Once you have installed R, Rtools (in some cases using Windows) and RStudio{{< video https://youtu.be/ZNBZevfYgo0 >}}, you need to install a package. A package is like fixing a bulb and you have to do it only once. Once you have installed relevant package(s), next is to recall it using `library()` which is like switching on a button of a bulb. There is base-R commands but very easy and useful is to learn `tidyverse` which consists of many useful packages, we will talk later on.
+How to install R and RStudio , please have a quick watch of this video. {{< video https://youtu.be/ZNBZevfYgo0 >}}. 
+Once you have installed R, Rtools (in some cases using Windows) and RStudio, you need to install a package. A package is like fixing a bulb and you have to do it only once. Once you have installed relevant package(s), next is to recall it using `library()` which is like switching on a button of a bulb. There is base-R commands but very easy and useful is to learn `tidyverse` which consists of many useful packages, we will talk later on.
 
 As always, the first thing we will do is load the tidyverse.
 
