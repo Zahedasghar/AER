@@ -37,9 +37,11 @@ library(janitor)## For cleaning data
 
 ## Now read data of ASER and Alifailan 2013-2016
 
+## You can download  data from https://github.com/Zahedasghar/AER/blob/main/data/alif_aser.csv
+
 edf <- read_csv("docs/data/edu_data_kaggle.csv")   ## Read csv file
 
-edf |> glimpse()## To have overview of data
+edf |> glimpse()## To have overview of data    
 
 ## 580 row and 51 columns
 
@@ -50,6 +52,8 @@ View(edf)
 ## To change these variables to nice format
 
 edf |> clean_names()
+
+
 
 edf |> clean_names() |> View()
 
@@ -68,6 +72,8 @@ edf_c |> select(year, province, city, everything())
 
 ## Use select to have variables containing percent 
  
+ View(edu_df)
+ 
  edu_df |> select(contains("percent"))
 
 edu_df |> select(ends_with("score")) 
@@ -82,7 +88,7 @@ edu_sc <- edu_df |> select(year, province, district, everything())
 
 edu_sc |> distinct(year)
 
-edu_sc |> distinct(district) |> count()
+edu_sc |>filter(year==2013) |>  distinct(district) |> count()
 
 edu_sc |> group_by(province) |> distinct(district) |> count()
 
@@ -99,36 +105,34 @@ edf_c |> count(year,province) |>
 
 
 ## Filter only for year 2014 
-edu_sc$
-
 edu_sc |> filter(year==2014) |> head(4)
 
 edu_sc |> filter(year==2014) |> slice(103:108)
 
 ## Minimum rention score district wise
-edu_sc |> select(year, province, district, retention_score, everything()) |>  filter(year==2013) |> filter(retention_score==min(retention_score), .by=province)
+edu_sc |> select(year, province, district, retention_score, everything()) |> 
+  filter(year==2013) |> filter(retention_score==min(retention_score), .by=province)
 
 
-edu_sc |> select(year, province, district, education_score, everything()) |>  filter(year==2013, province %in% c("Punjab",
+edu_sc |> select(year, province, district, education_score, everything()) |>
+  filter(year==2013, province %in% c("Punjab", "Sindh"))
                                                                                                                  "KP","Balochistan", "Sindh")) |> filter(education_score==min(education_score), .by=province)
 
 
 
 edf_short <- edu_sc |> select(year, province, district, contains("score"))
 
-edf_short$enrolment_score
-## mutate
-
-edf_short |> rowwise() |> mutate(score_index=mean(c_across(c('education_score','retention_score',
-                                           'gender_parity_score',
-                                          'learning_score' , 'enrolment_score',
-                                         'school_infrastructure_score' )))) ->edf_short
-
 edf_short |> glimpse()
 
 ## summarise
 
 summary(edf_short)
+library(skimr)
+edf_short |> skim()
+
+edf_short |> filter(year==2014) |>  select(province, enrolment_score, learning_score) |> 
+  group_by(province) |> 
+  skim()
 
 
 edf_short |> filter(province %in% c("Punjab","Balochistan","Sindh", "KP")) |> 
@@ -188,7 +192,7 @@ edf_short |> filter(province %in% c("Punjab","Balochistan","Sindh", "KP")) |>
             max_learn=max(learning_score),
             
             sd=sd(learning_score),
-            .by=year)
+            .by=c(year,province))
 
 edf_short |> filter(province %in% c("Punjab","Balochistan","Sindh", "KP")) |> 
   summarise(mean_learn=mean(learning_score), 
@@ -214,6 +218,86 @@ edf_short |> filter(province =="Sindh") |>
             sd=sd(learning_score),
             .by=c(province,year))
 
-edf_c |> glimpse()
 
 
+## Which district in each province has minimum education score
+
+
+
+edf_short |> select(year, province, district, education_score, everything()) |>  filter(year==2013, province %in% c("Punjab",
+                                                                                                                 "KP","Balochistan", "Sindh")) |> 
+  group_by(province)|> filter(education_score==min(education_score))
+
+
+## mutate to calculate score index based on all score variables
+
+edf_short |> rowwise() |> mutate(score_index=mean(c_across(c('education_score','retention_score',
+                                                             'gender_parity_score',
+                                                             'learning_score' , 'enrolment_score',
+                                                             'school_infrastructure_score' )))) ->edf_short
+
+## Which district has lowest score index 
+edf_short|> select(year, province, district, score_index, everything()) |>  filter(year==2013, province %in% c("Punjab",
+                                                                                                                   "KP","Balochistan", "Sindh")) |> 
+  group_by(province)|> filter(score_index==min(score_index))
+
+
+edf_short|> select(year, province, district, score_index, everything()) |>  filter(year==2016, province %in% c("Punjab",
+                                                                                                               "KP","Balochistan", "Sindh")) |> 
+  group_by(province)|> filter(score_index==max(score_index))
+
+
+edf_short|> select(year, province, district, score_index, everything()) |>  filter(province %in% c("Punjab",
+                                                                                                               "KP","Balochistan", "Sindh")) |> 
+  group_by(province,year)|> filter(score_index==max(score_index)) |> arrange(province)
+
+edf_short|> select(year, province, district, score_index, everything()) |>  filter(province %in% c("Punjab",
+                                                                                                   "KP","Balochistan", "Sindh")) |> 
+  group_by(province,year)|> filter(score_index==min(score_index)) |> arrange(province)
+
+
+## To make nice tables and quick summary
+
+library(gt)
+library(gtsummary)
+library(gtExtras)
+
+
+edf_short |> select(is.numeric, -year) |> gt_plt_summary()
+
+edf_short|> select(year, province, district, score_index, everything()) |>  filter(year==2016, province %in% c("Punjab",
+                                                                                                               "KP","Balochistan", "Sindh")) |> 
+  group_by(province)|> filter(score_index==max(score_index)) -> table_scr 
+table_scr
+
+table_scr |> select(-year) |> gt() |> fmt_number(decimals = 2) |> gt_theme_nytimes()|> 
+  tab_header("Minimum education score (index based on score variable) in 2016") |> 
+  tab_footnote("source:alifailan, by Zahid Asghar")
+
+
+countrypops |>
+  dplyr::select(country_code_3, year, population) |>
+  dplyr::filter(country_code_3 %in% c("CHN", "IND", "USA", "PAK", "IDN")) |>
+  dplyr::filter(year > 1975 & year %% 5 == 0) |>
+  tidyr::spread(year, population) |>
+  dplyr::arrange(desc(`2015`)) |>
+  gt(rowname_col = "country_code_3") |>
+  fmt_number(suffixing = TRUE)
+
+
+countrypops |>
+  dplyr::select(country_code_3, year, population) |>
+  dplyr::filter(country_code_3 %in% c("CHN", "IND", "USA", "PAK", "IDN", "BGD")) |>
+  dplyr::filter(year > 1975 & year %% 5 == 0) |>
+  tidyr::spread(year, population) |>
+  dplyr::arrange(desc(`2015`)) |>
+  gt(rowname_col = "country_code_3") |>
+  fmt_number(suffixing = TRUE, n_sigfig = 3) |> 
+  gt_highlight_rows(rows = 5, fill="red", font_weight = "normal")|> 
+  tab_header(title="Pakistan's population: the ticking bomb",
+             subtitle ="Had Pakistan observed Bangladesh population growth rate pattern, it would 
+             not have been left behind" ) |> 
+  tab_footnote("Source:https://data.worldbank.org/indicator/SP.POP.TOTL by: Zahid Asghar")
+
+
+  
