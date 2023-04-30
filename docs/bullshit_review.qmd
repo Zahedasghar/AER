@@ -25,7 +25,7 @@ editor: visual
 ##  {.title}
 
 ::: r-fit-text
-[Calling Bullshit]{.flow}
+[Calling Bullshit]{.flow} <br> book review
 :::
 
 ::: {style="font-size: 80px"}
@@ -35,7 +35,7 @@ Zahid Asghar
 Professor, School of Economics
 
 ::: notes
-Hi everybody! Thank you so much for joining today's presentation. I am so excited to introduce this new initiative and many thanks to the worth VC and his team for having me today.
+Hi everybody! Thank you so much for joining today's book review session. I am so excited to introduce this discuss with you about this book *Calling Bullshit : The Art of skepticism in a Data-Driven World* by Bergstrom and Jevin West.
 :::
 
 ```{r include=FALSE}
@@ -46,6 +46,29 @@ clrs_lt <- colorspace::lighten(clrs, 0.9)
 knitr::opts_chunk$set(fig.retina = 3, collapse = TRUE)
 options(digits = 3, width = 75)
 ```
+
+# Book outline 
+
+## Main Message
+
+> To detect when a man is talking rot is sole purpose of education. One does not need to be R/L, everyone is talking BS. Art of critical thinking is highly desirable skill. Science is providing overloaded information and there is need to separate facts from fiction.
+
+- Policy makers, media, society, government, politicians... 
+
+
+## Bullshit Everywhere
+
+
+
+- what BS is? where from? and why so much?
+
+- BS not a new phenomenon : Plato complained about philosophers 
+
+- Animal have deception behaviors
+
+- Sophisticated BS is theory of mind (rare in animal kingdom) but may have in our close primates relatives : chimpanzees and gorillas
+
+
 
 ## Nature News Piece
 
@@ -64,7 +87,7 @@ Letter by Prof Rice to Nature : In 2626 a far more interesting : women in less t
 
 -   [**Why our quant courses not very helpful**]{style="color:blue;"}
 
--   **Each of us create lot of nonsense (irrespective of idealogy, belongings, profession)**
+-   **Each of us create lot of nonsense (irrespective of ideaology, belongings, profession)**
 
 -   [**Skills for talking bullshit vs Art of Critical Skill**]{style="color:blue;"}
 
@@ -85,7 +108,7 @@ Basic skills when one is talking bullshit vs Art of Critical Skill
 
 :::
 
-## [Bullshit is not a new phenomenon]{.yellow}
+## Bullshit is not a new phenomenon
 
 ::: incremental
 -   **Millions of years even among animals**
@@ -95,7 +118,7 @@ Basic skills when one is talking bullshit vs Art of Critical Skill
 -   **Paltering** vs **Lying**
 :::
 
-# [Falsehood flies and the truth comes limping after it]{.yellow}
+# Falsehood flies and the truth comes limping after it
 
 ## 
 
@@ -367,4 +390,8 @@ Bullshit spotting requires care (walking at night)
 ### Calling Bullshit is a performative utterance in which one repudiates something objectionable.
 
 ### [The scope of targets is broader than bullshit alone.]{.yellow} You can call bullshit on bullshit, [but you can also call bullshit on lies, treachery, trickery, or injustice.]{.yellow}
+
+## 
+
+### McCool’s paper, “Uromycitisis Poisoning Results in Lower Urinary Tract Infection and Acute Renal Failure: Case Report,”
 
