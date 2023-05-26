@@ -1,25 +1,33 @@
 library(tidyverse)
+
 library(ggthemes)
-ggplot(data=mpg)
-
-ggplot(data=mpg)+aes(x=displ,y=cty,
-                     color=class)
 
 
-ggplot(data=mpg)+aes(x=displ,y=cty)+
+?mpg
+ggplot(mpg)+
+  aes(x=displ,y=hwy)+geom_point()
+
+ggplot(data=mpg)+
+  aes(x=displ,y=hwy,
+      color=class )+
   geom_point()
 
 
-ggplot(mpg)+aes(x=displ,y=cty)+
+ggplot(data=mpg)+aes(x=displ,y=hwy)+
   geom_point(aes(color=class))
 
-ggplot(mpg)+aes(x=displ,y=cty)+
+
+ggplot(mpg)+aes(x=displ,y=hwy)+
+  geom_point(aes(color=class))+
+  geom_smooth(method=lm,se=FALSE)
+
+ggplot(mpg)+aes(x=displ,y=hwy)+
   geom_point(aes(color=class))+
   geom_smooth()
 
 
 ggplot(data=mpg)+
-  aes(x=class,y=cty)+
+  aes(x=class,y=hwy)+
   geom_boxplot()
 
 ggplot(data=mpg)+
@@ -29,7 +37,7 @@ ggplot(data=mpg)+
 ggplot(data=mpg)+
   aes(x=class,fill=drv)+
   geom_bar()
-
+View(mpg)
 
 ggplot(data=mpg)+
   aes(x=class,fill=drv)+
@@ -37,10 +45,10 @@ ggplot(data=mpg)+
 
 p <- ggplot(data=mpg)+
   aes(x=displ,
-      y=cty)+
+      y=hwy)+
   geom_point(aes(color=class))+
   geom_smooth()
-p ## to show plot 
+p ## to show plot |> 
 
 p+facet_wrap(~year)
 
@@ -59,7 +67,13 @@ p+facet_grid(cyl~year)
   color="Vehicle Class")
 )
 
-p
+p+ facet_wrap(~year)+
+  labs(x="Engine Displacement",
+       y="Highway MPG",
+       title="Care mileage and displacement",
+       subtitle="More displacement lowers highway mpg",
+       caption="Source: EPA",
+       color="Vehicle Class")
 
 p+scale_x_continuous(breaks=seq(0,10,2),
                      limits=c(0,7.5),
@@ -73,7 +87,7 @@ p+scale_x_continuous(breaks=seq(0,10,2),
 
 ggplot(data=mpg)+
   aes(x=displ,
-      y=cty)+
+      y=hwy)+
   geom_point(aes(color=class))+
   geom_smooth()+
   facet_wrap(~year)+
@@ -91,7 +105,7 @@ ggplot(data=mpg)+
 library(ggthemes)
 ggplot(data=mpg)+
   aes(x=displ,
-      y=cty)+
+      y=hwy)+
   geom_point(aes(color=class))+
   facet_wrap(~year)+
   labs(x="Engine Displament (Liters)",
@@ -102,7 +116,8 @@ caption="Source:EPA",
 color="Vehicle Class")+
   scale_color_viridis_d()+
   theme_fivethirtyeight()+
-  theme(tehttp://127.0.0.1:23289/graphics/c10b18a8-aa63-4594-a821-af1766451b1f.pngxt = element_text(family = "Fira Sans"))
+  theme( text=element_text(family = "Fira Sans"),
+         legend.position = "bottom")
 
 
 

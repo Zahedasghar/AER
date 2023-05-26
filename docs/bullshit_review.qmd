@@ -47,28 +47,23 @@ knitr::opts_chunk$set(fig.retina = 3, collapse = TRUE)
 options(digits = 3, width = 75)
 ```
 
-# Book outline 
+# Book outline
 
 ## Main Message
 
 > To detect when a man is talking rot is sole purpose of education. One does not need to be R/L, everyone is talking BS. Art of critical thinking is highly desirable skill. Science is providing overloaded information and there is need to separate facts from fiction.
 
-- Policy makers, media, society, government, politicians... 
-
+-   Policy makers, media, society, government, politicians...
 
 ## Bullshit Everywhere
 
+-   what BS is? where from? and why so much?
 
+-   BS not a new phenomenon : Plato complained about philosophers
 
-- what BS is? where from? and why so much?
+-   Animal have deception behaviors
 
-- BS not a new phenomenon : Plato complained about philosophers 
-
-- Animal have deception behaviors
-
-- Sophisticated BS is theory of mind (rare in animal kingdom) but may have in our close primates relatives : chimpanzees and gorillas
-
-
+-   Sophisticated BS is theory of mind (rare in animal kingdom) but may have in our close primates relatives : chimpanzees and gorillas
 
 ## Nature News Piece
 
@@ -82,8 +77,7 @@ Letter by Prof Rice to Nature : In 2626 a far more interesting : women in less t
 ## Data Reasoning in Digital World
 
 ::: incremental
-
-- **How to refute nonsense/bullshit/false claims**
+-   **How to refute nonsense/bullshit/false claims**
 
 -   [**Why our quant courses not very helpful**]{style="color:blue;"}
 
@@ -94,7 +88,7 @@ Letter by Prof Rice to Nature : In 2626 a far more interesting : women in less t
 -   **Way forward**
 
 ::: notes
-```         
+\`\`\`\
 Refuting nonsense based on data and techniques is more difficult to refute than common media falsification
 
 Our statistical tool based courses are mainly concerned on focusing technique and very little focus on quantitative reason and logic, therefore, even educated masses fail to spot bullshit and call it bullshit.
@@ -105,7 +99,6 @@ Each of us talk bullshit and it has nothing to do with religious/less religious.
 
 Basic skills when one is talking bullshit vs Art of Critical Skill
 :::
-
 :::
 
 ## Bullshit is not a new phenomenon
@@ -318,8 +311,7 @@ Axis of evil
 
 ## 
 
-**The Prosecutor's Fallacy** 
-["There is absolutely no chance of getting a fingerprint match this good simply by accident."]{style="color:red;"} Is it different than [**"No, we want to know what chance there is that my client is innocent given that we've got a match."**]{style="color:blue;"}
+**The Prosecutor's Fallacy** ["There is absolutely no chance of getting a fingerprint match this good simply by accident."]{style="color:red;"} Is it different than [**"No, we want to know what chance there is that my client is innocent given that we've got a match."**]{style="color:blue;"}
 
 #### P(Match/innocent) $\neq$ P(innocent/match)
 
@@ -393,5 +385,4 @@ Bullshit spotting requires care (walking at night)
 
 ## 
 
-### McCool’s paper, “Uromycitisis Poisoning Results in Lower Urinary Tract Infection and Acute Renal Failure: Case Report,”
-
+### McCool's paper, "Uromycitisis Poisoning Results in Lower Urinary Tract Infection and Acute Renal Failure: Case Report,"

@@ -1,3 +1,6 @@
+
+
+
 ## Lesson Plan
 
 ## Reading Data
@@ -39,7 +42,7 @@ library(janitor)## For cleaning data
 
 ## You can download  data from https://github.com/Zahedasghar/AER/blob/main/data/alif_aser.csv
 
-edf <- read_csv("docs/data/edu_data_kaggle.csv")   ## Read csv file
+edf <- read_csv("data/edu_data_kaggle.csv")   ## Read csv file
 
 edf |> glimpse()## To have overview of data    
 
@@ -61,20 +64,22 @@ edf |> clean_names() |> View()
 
 edf |> clean_names() -> edf_c
 
-
+edf_c |> glimpse()
 ## Lets take year, province and city as first three and
 ## rename city as district
 
 edf_c |> select(year, province, city, everything())
 
 ## Lets assign this data as 
- edf_c |> select(year, province, city, everything()) |> rename(district=city) -> edu_df
+ edf_c |> select(year, province, city, everything()) |> 
+   rename(district=city) -> edu_df
 
 ## Use select to have variables containing percent 
  
  View(edu_df)
  
- edu_df |> select(contains("percent"))
+ edu_df |> select(contains("percent")) |> 
+   View()
 
 edu_df |> select(ends_with("score")) 
 
@@ -110,19 +115,24 @@ edu_sc |> filter(year==2014) |> head(4)
 edu_sc |> filter(year==2014) |> slice(103:108)
 
 ## Minimum rention score district wise
-edu_sc |> select(year, province, district, retention_score, everything()) |> 
-  filter(year==2013) |> filter(retention_score==min(retention_score), .by=province)
+edu_sc |> select(year, province, district,
+                 retention_score, everything()) |> 
+  filter(year==2013) |> 
+  filter(retention_score==min(retention_score), 
+         .by=province)
 
 
-edu_sc |> select(year, province, district, education_score, everything()) |>
-  filter(year==2013, province %in% c("Punjab", "Sindh"))
+edu_sc |> select(year, province, district,
+                 education_score, everything()) |>
+  filter(year==2013, province %in% c("Punjab", 
+                                     "Sindh"))
                                                                                                                  "KP","Balochistan", "Sindh")) |> filter(education_score==min(education_score), .by=province)
 
 
 
 edf_short <- edu_sc |> select(year, province, district, contains("score"))
 
-edf_short |> glimpse()
+edf_short |> glimpse() |> View()
 
 ## summarise
 
@@ -130,7 +140,7 @@ summary(edf_short)
 library(skimr)
 edf_short |> skim()
 
-edf_short |> filter(year==2014) |>  select(province, enrolment_score, learning_score) |> 
+edf_short |> filter(year==2014) |>  select(province,  learning_score) |> 
   group_by(province) |> 
   skim()
 

@@ -3,10 +3,10 @@ title: " dplyr 5 verbs for data wrangling"
 author: "Zahid Asghar"
 format: 
   html:
-    theme: [default, custom.css]
+    theme: [default, custom.css, styles.scss]
     toc: true
     code-link: true
-highlight-style: dracula
+highlight-style: github
 execute: 
   freeze: auto
 ---
