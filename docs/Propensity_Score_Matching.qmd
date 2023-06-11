@@ -1,0 +1,138 @@
+---
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    filters:
+      - reveal-auto-agenda
+      - lightbox
+    auto-agenda:
+      bullets: numbered
+      heading: Agenda
+    transition: fade
+    chalkboard: true
+    background-transition: fade
+    highlight-style: pygments
+    footer: "https://zahedasghar.netlify.app"
+    title-slide-attributes:
+      
+      data-background-image: images/hexes.png
+      data-background-size: cover
+execute:
+  echo: false
+  warning: false
+  freeze: auto
+---
+
+::: r-fit-text
+[Propensity Score Matching]{.flow}
+:::
+
+::: {style="font-size: 80px"}
+Zahid Asghar
+:::
+
+Impact Evaluation Tools
+
+::: notes
+Hi everybody! Thank you so much for joining today's presentation. I am
+so excited to introduce this new initiative and many thanks to the worth
+VC and his team for having me today.
+:::
+
+# Good Evening
+
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+```
+
+
+## Propensity Score Matching
+
+::: {.incremental} 
+
+-   Public or Private School
+-   Spending : Free vs Not free shipping
+-   Smoking
+-   Piped Water Access
+-   Textbooks/laptop 
+
+:::
+
+
+
+
+
+## Propensity Score Matching
+
+-   Propensity Score Matching (PSM) is a quasi-experimental technique
+    endorsed by the U.S. Department of Education to control for
+    covariates such as self-selection bias and non-random assignment.
+
+-   PSM is a statistical matching technique designed to estimate the
+    effect of a treatment, policy, or other intervention by accounting
+    for the covariates that are also related to the treatment.
+
+-   PSM can control for non-group differences and then apply the results
+    to the matched groups.
+
+-   PSM can control for self-selection. Self-selection is also known as
+    the volunteer effect and occurs when a participant is motivated to
+    take part in the research study.
+
+## 
+
+The ideal comparison group is selected such that matches the treatment
+group using either a comprehensive baseline survey or time invariant
+characteristics
+
+The matches are selected on the basis of similarities in observed
+characteristics
+
+This assumes no selection bias based on unobserved characteristics Take
+the ITN Example from Yesterday: Households who were more concerned about
+malaria also took other preventative actions All such differences must
+be in the data in order for the match to produce a valid estimate of
+project impacts
+
+## 
+
+Propensity score matching: match treated and untreated observations on
+the estimated probability of being treated (propensity score). Most
+commonly used.
+
+Match on the basis of the propensity score P(X) = Pr (d=1\|X) D
+indicates participation in project Instead of attempting to create a
+match for each participant with exactly the same value of X, we can
+instead match on the probability of participation.
+
+## 
+
+![](images/PSM.png)
+
+## Steps in PSM
+
+1. Need representative and comparable data for both treatment and comparison groups. 
+
+2. Use a logit (or other discrete choice model) to estimate program participations as a function of observable characteristics. 
+
+3. Use predicted values from logit to generate propensity score p(xi) for all treatment and comparison group members
+
+
+4. Match Pairs: Restrict sample to common support (as in Figure)
+Need to determine a tolerance limit: how different can control individuals or villages be and still be a match?
+Nearest neighbors, nonlinear matching, multiple matches
+
+5. Once matches are made, we can calculate impact by comparing the means of outcomes across participants and their matched pairs
+
+## PSM vs Randomization
+
+Randomization does not require the untestable assumption of independence conditional on observables
+PSM requires large samples and good data:
+Ideally, the same data source is used for participants and non-participants
+
+Participants and non-participants have access to similar institutions and markets, and 
+
+The data include X variables capable of identifying program participation and outcomes. 
+

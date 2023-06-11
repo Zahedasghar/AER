@@ -22,3 +22,5 @@ gss_cat |> group_by(marital) |>
              ymin=mean_tv-sd_tv,
              ymax=mean_tv+sd_tv))+
   geom_errorbar()
+
+

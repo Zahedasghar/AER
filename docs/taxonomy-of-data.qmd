@@ -1,0 +1,218 @@
+---
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    filters:
+      - reveal-auto-agenda
+      - lightbox
+    auto-agenda:
+      bullets: numbered
+      heading: Agenda
+    transition: fade
+    chalkboard: true
+    background-transition: fade
+    highlight-style: pygments
+    footer: "https://zahedasghar.netlify.app"
+    title-slide-attributes:
+      
+      data-background-image: images/hexes.png
+      data-background-size: cover
+execute:
+  echo: false
+  warning: false
+  freeze: auto
+---
+
+::: r-fit-text
+[Taxonomy of data]{.flow}
+:::
+
+::: {style="font-size: 80px"}
+Zahid Asghar
+:::
+
+
+::: notes
+Hi everybody! Thank you so much for joining today's presentation. I am so excited to introduce this new initiative and many thanks to the worth VC and his team for having me today.
+:::
+
+# Good Afternoon
+
+While you're waiting, please send a browser tab to `pollev.com/zahidasghar349` or download the Poll Everywhere app to your phone.
+
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+```
+
+# The Taxonomy of Data
+
+## Announcements
+
+1.  How to stay in the loop with this class
+
+2.  Getting Help
+
+## Agenda
+
+1.  The Taxonomy of Data
+2.  Sampling Techniques, Response and Explanatory Variables
+3.  pollev.com/zahidasghar349
+4.  The Data Frame
+5.  RStudio.cloud introduction
+
+To learn how to critique and construct claims made using data.
+
+## Data defined
+
+**Data:**
+
+(n) An item of (chiefly numerical) information, esp. one obtained by scientific work, a number of which are typically collected together for reference, analysis, or calculation.
+
+-   From latin *datum*: that which is given.
+
+-   Facts.
+
+-   **Variable:**
+
+-   A characteristic of an object / unit that can be measured / recorded.
+
+**Observations**: the collection of objects / units that are being measured / recorded.
+
+## Data data and data
+
+<iframe src="https://giphy.com/embed/Of40xPqggQrde" width="950" height="750" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+## Taxonomy
+
+![](images/plant-taxonomy.jpeg)
+
+Carl Linnaeus, *Systema Naturae*, 1735
+
+::: notes
+Draw data Taxonomy on Board
+:::
+
+## The Taxonomy of Data
+
+![](images/taxonomy-of-data.png)
+
+## Types of Variables
+
+::: incremental
+-   **Numerical**: Variables that take numbers as values that are sensible to add, subtract, etc.
+
+-   [**Categorical**: Variables that take categories as values (called *levels*).]{style="color:purple;"}
+
+-   **Continuous**: A numerical variable that takes values on an interval of the real number line.
+
+-   [**Discrete**: A numerical variable that takes values that have jumps between them (i.e. an ordered countable set).]{style="color:purple;"}
+
+-   **Ordinal**: A categorical variable with levels that have a natural ordering.
+
+-   [**Nominal**: A categorical variable with levels with no ordering.]{style="color:purple;"}
+:::
+
+## Class survey
+
+A survey was conducted on students in an introductory statistics course. Below are a few of the questions on the survey, and the corresponding variables the data from the responses were stored in:
+
+::: {.incremental} 
+
+- gender: What is your gender?  
+
+- [intro extra: Do you consider yourself introverted or extraverted?]{style="color:purple;"} 
+
+- sleep: How many hours do you sleep at night, on average?  
+
+- [bedtime: What time do you usually go to bed?]{style="color:purple;"} 
+
+- countries: How many countries have you visited?  
+
+- [dread: On a scale of 1-5, how much do you dread being here]{style="color:purple;"} 
+
+:::
+
+# The Data Frame
+
+## 
+
+[The **type** of variable informs the way it should be **visualized** and **analyzed**.](.adage)
+
+![Data Frame](images/data_frame.png){width=90%}
+
+
+
+## Observing Penguins
+
+![](images/palmer-station.jpeg)
+
+- Palmer Station, Antarctica : 
+*Size measurements for adult foraging penguins near Palmer Station, Antarctica*, K. Gorman 2020.
+
+## Variables: Beak Length, Beak Depth
+
+::: incremental
+-   ![](images/culmen_depth.png)
+
+-   
+
+    > These are *continuous* variables.
+:::
+
+## Variable: Species
+
+::: incremental
+-   ![](images/lter_penguins.png)
+
+-   What is nature of this variable?
+
+-   This is a nominal variable.
+:::
+
+## The Data Frame
+
+```{r message = FALSE, echo = FALSE}
+library(knitr)
+library(kableExtra)
+library(palmerpenguins)
+penguins %>%
+  select(bill_depth_mm, bill_length_mm, species) %>%
+  sample_n(4) %>%
+  kbl()
+```
+
+A **data frame** is an array that associates the *observations* (downs the rows) with the *variables* measured on each observation (across the columns). Each cell storse a **value** observed for a variable on an observation.
+
+**Unit of observation**:
+
+The type of the object on which the variables are observed.
+
+> Here: an adult foraging *penguin* near Palmer Station, Antarctica
+
+## Non-tidy Data Frames
+
+From Wikipedia, a *contingency table* of sex and handedness.
+
+![](images/non-tidy-contingency-table.png)
+
+What is the unit of observation?
+
+What are the variables? 
+
+## Non-tidy Data Frames
+
+From the World Bank, the number of hospital beds.
+
+![](images/non-tidy-world-bank.png)
+
+What is the unit of observation?
+
+What are the variables?
+
+## Lets practice
+
+

@@ -1,0 +1,131 @@
+---
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    # filters:
+    #   - reveal-auto-agenda
+    #   - lightbox
+    # # auto-agenda:
+    #   bullets: numbered
+    #   heading: Agenda
+    transition: fade
+    chalkboard: true
+    background-transition: fade
+    highlight-style: pygments
+    footer: "https://zahedasghar.netlify.app"
+    title-slide-attributes:
+      
+      data-background-image: images/hexes.png
+      data-background-size: cover
+execute:
+  echo: false
+  warning: false
+  freeze: auto
+---
+
+::: r-fit-text
+[Hardware vs Software Development]{.flow}
+:::
+
+::: {style="font-size: 80px"}
+Zahid Asghar
+:::
+University of Malakand, Malakand
+
+
+::: notes
+Hi everybody! Thank you so much for joining today's presentation. I am so excited to introduce this new initiative and many thanks to the worth VC and his team for having me today.
+:::
+
+## Hardware and Technology
+
+- Maybe borrowed
+
+## Software
+
+-   local phenomenon 
+-   local thinking
+-   local solutions
+-   take sustainable and systemic approach 
+
+## Why Best Practices Fail
+
+-   Policy formulation is important
+  -   More important is state capacity 
+-   Donors driven policies 
+  -   One size fit all 
+-   UoMalakand issues different 
+  -   No harm in guideline
+-   Micro-issues may be of more importance than macroecnomic issues 
+
+
+#  {background-color="black" background-image="images/gemstone.jpg" background-size="200px" background-repeat="repeat"} 
+
+## 
+
+![](images/gemstone.jpg){.r-stretch}
+
+## KP : Rich of natural resources, why its not rich
+
+::: columns
+::: {.column width="70%"}
+![](images/gemstone.jpg){width="1080"}
+:::
+
+::: {.column width="30%"}
+
+ [Posessing natural resources alone will not be sufficient. Value added at local level requires both domestic trained human capital and investment.]{style="color:blue;"}
+::: 
+:::
+
+##  
+
+The ownership of natural resources must be backed by the strength of the institutions and local human capital that exploit them
+
+## 
+
+American theologian and author James Freeman Clarke (1810-1888) is reported to have explained the distinction between a politician and a statesman as follows: 
+
+>    "A politician thinks of the next election. A statesman, of the next generation."
+
+
+## Pipenomics
+
+### CPEC 
+
+Flawed Economic Discourse
+Pipedreams: SEZs, Roads, Corridors, Gas pipelines
+
+Stuck: hardcore paradigm of development
+
+Reality: Software is primary requirement
+
+## 
+SOFTWARE
+Rule of Law (Contracts are honored)
+Property Rights (China’s economic growth after PR Changed)
+Allocation of Talent (Meritocracy)
+Organisational and managerial capacity
+Knowledge acquisition
+All this : Cant be bought, domestic capacity and domestic reforms One has to built all this as it can not be imported
+
+Keynes: A madman who knows the world is a slave of defunct economist
+
+## 
+
+Stuck in MH paradigm
+
+
+How can start this journey: Hard choice, long term phenomenon
+
+Economic Corridor : F-16 Protocol (China, Saudia …)
+
+## 
+
+Donors and Experts : Easy answers
+Prescriptions are not implemented
+Lack of political will : If success, they celebrate otherwise blame
+Best practices
+How can same policies for all countries
+Practices well known ,govt implementing agency
+Approach : Top-down (All solutions from foreign experts) Land-cruisers, consultants … results are the same

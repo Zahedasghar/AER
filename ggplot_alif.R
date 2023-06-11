@@ -3,7 +3,7 @@ library(readr)
 library(janitor)
 
 
-gdf1 <- read_csv("https://raw.githubusercontent.com/Zahedasghar/AER/main/data/alif_aser.csv")
+alif <- read_csv("https://raw.githubusercontent.com/Zahedasghar/AER/main/data/alif_aser.csv")
 
 
 alif |> clean_names() ->gdf
