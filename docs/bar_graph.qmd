@@ -28,7 +28,7 @@ execute:
 :::
 
 ::: {style="font-size: 80px"}
-[Learn R-101 in easy way]{.flow}
+[Learn R-101 in easy way V#5]{.flow}
 :::
 
 Zahid Asghar
@@ -41,13 +41,16 @@ Zahid Asghar
 #| message: false
 library(tidyverse)  #<1>
 ```
-1. Recall relevant libraries. In this post we require `dplyr` and `ggolot2` which are available in `tidyverse`. For more background on it , please watch V#1 to V#4  {{< video https://youtu.be/dpIYsMRDWks >}} . These videos are in Urdu/Hindi so appologies from others but codes are available to all for reproducing all the contents.
+1. Recall relevant libraries. In this post we require `dplyr` and `ggolot2` which are available in `tidyverse`. For more background on it , please watch V#1 to V#4  {{< video https://youtu.be/dpIYsMRDWks >}}. 
+These videos are in Urdu/Hindi so appologies from others but codes are available to all for reproducing all the contents.
+Complete code is given in video link for bar graph here {{<https://youtu.be/CI_q5BhJguM>}} 
 
 
 ## Outline
 ### bar graph: single categorical variable
 ### Histogram : for continuous variable
 ### bar graph in ggplot2
+
 
 
 ```{r}
