@@ -43,7 +43,7 @@ library(tidyverse)  #<1>
 ```
 1. Recall relevant libraries. In this post we require `dplyr` and `ggolot2` which are available in `tidyverse`. For more background on it , please watch V#1 to V#4  {{< video https://youtu.be/dpIYsMRDWks >}}. 
 These videos are in Urdu/Hindi so appologies from others but codes are available to all for reproducing all the contents.
-Complete code is given in video link for bar graph here {{<https://youtu.be/CI_q5BhJguM>}} 
+Complete code is given in video link for bar graph here {{< video https://youtu.be/CI_q5BhJguM >}} 
 
 
 ## Outline
