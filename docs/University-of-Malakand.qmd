@@ -51,8 +51,19 @@ Hi everybody! Thank you so much for joining today's presentation. I am so excite
 -   local solutions
 -   take sustainable and systemic approach 
 
+
+
 # Complicated vs Complex process
+
+## 
 How China Escaped the Poverty Trap, tackles this long-standing, chicken-and-egg (endogenous) problem in development through a dynamic, complex systems approach. I argue that this chicken-and-egg debate is false because it incorrectly assumes that development is a linear process, wherein causality runs in only one direction. In fact, development is a coevolutionary (mutually causal) process that occurs in three reciprocal steps: harness existing weak institutions to build markets > emerging markets stimulate strong institutions > strong institutions preserve markets. 
+
+## 
+ Yet we all know that social worlds are not complicated; they are almost always 
+complex. Complex systems comprise many moving parts that interact with one 
+another and change together, triggering outcomes that cannot be precisely controlled or predicted in advance. Human bodies are an example of complex systems. Political economies, comprising many players, many institutions, and many 
+interactions, are complex. 
+
 
 # Focus on Girls
 
