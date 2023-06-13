@@ -1,43 +1,44 @@
+#  Load Libraries
+library(tidyverse) ## tidyverse has 9 packages built in it
 
 
-# Libraries
-library(tidyverse)
-library(ggplot2)
-
-#' Outline
 #' bar graph: single categorical variable
 #' Histogram : for continuous variable
-#' bar graph in ggplot2
+#' bar graph in ggplot2 
+ 
+
 mtcars |> glimpse()
 
-## cyle as factor variable
+## cyl as factor variable, so make a bargraph
 
-mtcars |> mutate(cyl=as.factor(cyl)) -> mtcars
-
-
+mpg |> glimpse() #cyl as integer so convert it into factor
 
 
-#'1 Bar graph
+
+#'1 Bar graph 
+
 ggplot(mtcars) 
 
-ggplot(mtcars) + aes(x = cyl)
+ggplot(mtcars) + aes(x = cyl) 
 
 
 ggplot(mtcars) + aes(x = cyl) +
-  geom_bar()
+  geom_bar()   
+  
 
 
 
 
 # 2: uniform color. Color is for the border, fill is for the inside 
 
-ggplot(mtcars, aes(x = as.factor(cyl))) +
+
+
+ggplot(mtcars) +
+  aes(x=cyl) +
+  geom_bar(fill="blue")  # Color is the border
+
+ggplot(mtcars, aes(x = cyl)) +
   geom_bar(color = "blue", fill = rgb(0.1, 0.4, 0.5, 0.7)) ## Alternatively use as.factor whenever you specify cyl
-
-
-ggplot(mtcars)+
-  aes(x=cyl)+
-  geom_bar(color="blue")  # Color is the border
 
 
 ggplot(mtcars)+
@@ -59,7 +60,7 @@ ggplot(mtcars, aes(x=cyl, fill=cyl )) +
 # 4: Using RColorBrewer
 ggplot(mtcars, aes(x=cyl, fill=cyl)) + 
   geom_bar( ) +
-  scale_fill_brewer(palette = "Set1") +
+  scale_fill_brewer(palette = "Set3") +
   theme(legend.position="none")
 
 
@@ -74,7 +75,7 @@ ggplot(mtcars, aes(x=cyl, fill=cyl )) +
 
 ggplot(mtcars, aes(x=cyl, fill=cyl )) +  
   geom_bar( ) +
-  scale_fill_manual(values = c("lightgreen", "lightgreen", "blue") ) +
+  scale_fill_manual(values = c("lightgreen", "lightgreen", "red") ) +
   theme(legend.position="none") 
 
 
@@ -116,7 +117,7 @@ data <- data.frame(
           6736027
   )
 )
-data <- data |> mutate(population=value/1000000) 
+data  <- data |> mutate(population=value/1000000) 
 data
 library(forcats)
 # Barplot
@@ -133,12 +134,10 @@ ggplot(data, aes(x=name, y=population)) +
 
 
 
-ggplot(data, aes(x = reorder(name, -population), y = population)) + geom_bar(stat =
-                                                                               "identity",
-                                                                             fill = "blue",
-                                                                             width = 0.8) +
-  theme_minimal() +
-  geom_text(aes(label = population), vjust = -0.5) +
+ggplot(data, aes(x=name, y=population)) + 
+  geom_bar(stat = "identity", width=0.9, fill="blue") +
+  theme_minimal()+
+  geom_text(aes(label=population), vjust=-.5)+
   labs(x = element_blank(),
        y = element_blank())
 
@@ -175,7 +174,7 @@ ggplot(data, aes(x = reorder(name, population), y = population)) + geom_bar(stat
   labs(x = element_blank(),
        y = element_blank()) + coord_flip() +
   labs(title = "Sind population (in millions) division wise:  2023 census",
-       caption = "Wikipedia") +
+       caption = "Source: Wikipedia") +
   theme_clean()
 
   
