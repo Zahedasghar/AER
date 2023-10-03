@@ -1,0 +1,87 @@
+---
+title: "Research Workshop Session on Data Analysis"
+
+author: "[Zahid Asghar](https://zahedasghar.netlify.app)"
+date: last-modified
+date-format: "DD-MM-YYYY"
+title-block-banner: "#27455C"
+format: 
+  html:
+    embed-resources: true
+    smooth-scroll: true
+    theme: theme.scss
+    fontcolor: black
+    toc: true
+    toc-location: left
+    toc-title: Summary
+    toc-depth: 3
+css: logo1.css
+execute: 
+  warning: false
+  freeze: auto
+---
+
+
+
+
+## Objectives
+-   Delineate variables among various types, like nominal, ordinal and interval.    
+
+-   Express why the logic of control is vital to any good research design. 
+
+-   Understand important elements of data, like central tendency and spread in practice
+-   Correlation, Regression, and Hypothesis testing in practice  
+
+-   Becoming familiar with use of R (without downloading and with zero coding experience), Excel and datwrapper
+
+## Session 1
+
+### Defining and Measuring Concepts
+ conceptual definition, operational definition, unit of analysis, ecological fallacy, (measurement) reliability, (measurement) validity, (systematic, random) measurement error, Hawthorne effect, test-restest method,
+(face, construct) validity.
+
+### Measuring and Describing Variables with Real Data
+
+This will delve more into the statistics side of things. Consider, for example, your measure of “democracy” may
+be 0 (non-democracy [e.g. China]) or 1 (democracy [e.g. Canada]), but only you (the researcher and the reader)
+will know that. Your computer program will not care. It just sees numerical measurements that vary and that it
+can do any number of things to summarize them. Beware, though: your computer is deceptively stupid. It will
+give you a mean of a categorical measurement if you ask for one. Your job is to be smarter than the computer.
+As daunting as that sounds, it is more a plea to be careful/mindful of some limitations you have with your data.  
+
+
+**Keywords**: constant/variable, nominal/ordinal/interval variable, dummy variable, Likert item, when can you
+treat an ordinal variable as interval/continuous?, mode/median/mean.
+
+
+## Session 2
+
+## Hypotheses and Comparisons 
+Prospectus due on Thursday.
+There will be some back-tracking this week in as much we’re going to talk about hypothesis crafting in some
+detail. We will talk a little bit more about writing theories. More importantly, we’re going to talk about making
+some comparisons with actual data. Everything this will be super basic statements of association the direction
+of relationships.  
+
+**Keywords**: (independent, dependent) variable, (positive, negative, zero, curvilinear) relationship, cross-tabulation, mean comparison
+
+## Correlation and Linear Regression with Real Data
+This week will extend statistical inference into the world of regression. Regression is a tool to model variation
+in some outcome as a (linear) function of one or more predictors and it is the workhorse of applied inferential
+statistics. The process of inference is the same, though typically regression modelers reject (or fail to reject)
+null hypotheses of zero relationship between a predictor and an outcome based on an observed coefficient and
+standard error. We’ll start first with an aside on correlation, which is its own useful tool as well.  
+
+**Keywords**: 
+correlation, scatterplot, Pearson’s r, multicollinearity, (multiple) regression, regression coefficient, standard
+error, prediction error, “ordinary least squares”, partial effects, interactive effects.
+
+## New ways of having data and analyzing
+
+### Analyzing Google Trends, Google News API, Media API
+Discussion of various sources from where one can read all data directly from web API. 
+-   Google trends
+-   Google news API
+-   Media API 
+-   UN votes data from 1948-49 on 6 key issues directly from API till to-date (Comparing Pakistan and India )
+-   Participants feedback for way forward

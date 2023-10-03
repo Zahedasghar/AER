@@ -1,0 +1,366 @@
+---
+title: "Data Analysis Workshop for PIE"
+author: "[Zahid Asghar](https://zahedasghar.netlify.app)"
+date: last-modified
+date-format: "DD-MM-YYYY"
+title-block-banner: "#27455C"
+format: 
+  html:
+    embed-resources: true
+    smooth-scroll: true
+    theme: theme.scss
+    fontcolor: black
+    toc: true
+    toc-location: left
+    toc-title: Summary
+    toc-depth: 3
+css: logo1.css
+execute: 
+  warning: false
+  freeze: auto
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Objectives
+
+-   Delineate variables among various types, like nominal, ordinal and
+    interval.
+
+-   Importance of research question and research design for data
+    analysis.
+
+-   Understand important elements of data, summarising, visualization
+    and tabulating data as per best practices
+
+-   Correlation and Regression, Linear and Nonlinear regressions
+
+-   Forecasting education needs: enrolment, infrastructure, human capita
+    and other requirements
+
+-   Becoming familiar with use of R (without downloading and with zero
+    coding experience)
+
+-   All slides, data , data codes and related stuff will be handed over
+    to reproduce all training material and prepare reports whenever
+    required after the training.
+
+## Main Topics
+
+### Defining and Measuring Concepts
+
+conceptual definition, operational definition, unit of analysis,
+ecological fallacy, (measurement) reliability, (measurement) validity,
+(systematic, random) measurement error, Hawthorne effect, test-restest
+method, (face, construct) validity.
+
+### Measuring and Describing Variables with Real Data
+
+constant/variable, nominal/ordinal/interval variable, dummy variable,
+Likert item, when can you treat an ordinal variable as
+interval/continuous?, mode/median/mean.
+
+### Hypotheses and Comparisons
+
+(independent, dependent) variable, (positive, negative, zero,
+curvilinear) relationship, cross-tabulation, mean comparison
+
+### Correlation and Linear Regression
+
+correlation, scatterplot, Pearson's r, multicollinearity, (multiple)
+regression, regression coefficient, standard error, prediction error,
+"ordinary least squares", partial effects, interactive effects.
+
+### Forecasting
+
+Components of Time Series, Decomposition of Time Series, ARMA, ARIMA,
+SARMA and other statistical models
+
+## Daywise detail
+
++------+------+------+------+------+
+| Days | T    | To   | Rea  |      |
+|      | itle | pics | ding |      |
+|      |      | to   | mate |      |
+|      |      | be   | rial |      |
+|      |      | cov  |      |      |
+|      |      | ered |      |      |
++------+------+------+------+------+
+| 1    | Intr | Intr |      |      |
+| (Mon | oduc | oduc |      |      |
+| day) | tion | tion |      |      |
+|      | to   | to   |      |      |
+|      | soft | R,   |      |      |
+|      | ware | RStu |      |      |
+|      |      | dio, |      |      |
+|      |      | P    |      |      |
+|      |      | OSIT |      |      |
+|      |      | C    |      |      |
+|      |      | loud |      |      |
+|      |      | ,    |      |      |
+|      |      | git  |      |      |
+|      |      | uhub |      |      |
++------+------+------+------+------+
+| 2    | Data |      |      |      |
+| (    | V    |      |      |      |
+| Wedn | ocab |      |      |      |
+| es   | ul   |      |      |      |
+| day) | ary, |      |      |      |
+|      | ta   |      |      |      |
+|      | xo   |      |      |      |
+|      | nomy |      |      |      |
+|      | (no  |      |      |      |
+|      | mi   |      |      |      |
+|      | nal, |      |      |      |
+|      | ca   |      |      |      |
+|      | tego |      |      |      |
+|      | ri   |      |      |      |
+|      | cal, |      |      |      |
+|      | dis  |      |      |      |
+|      | cr   |      |      |      |
+|      | ete, |      |      |      |
+|      | co   |      |      |      |
+|      | ntin |      |      |      |
+|      | uo   |      |      |      |
+|      | us), |      |      |      |
+|      | cl   |      |      |      |
+|      | ea   |      |      |      |
+|      | ning |      |      |      |
+|      | and  |      |      |      |
+|      | data |      |      |      |
+|      | wra  |      |      |      |
+|      | ng   |      |      |      |
+|      | ling |      |      |      |
++------+------+------+------+------+
+|      | R    | In   | con  |      |
+|      | ea   | clas | ti   |      |
+|      | ding | s-   | nued |      |
+|      | S    | labs |      |      |
+|      | TA   |      |      |      |
+|      | TA/S |      |      |      |
+|      | PS   |      |      |      |
+|      | S/cs |      |      |      |
+|      | v/   |      |      |      |
+|      | xlsx |      |      |      |
+|      | we   |      |      |      |
+|      | bAPI |      |      |      |
+|      | data |      |      |      |
+|      | in R |      |      |      |
++------+------+------+------+------+
+| 3 (M | Data | bar, | gr   |      |
+| on   | V    | sc   | ap   |      |
+| day) | is   | at   | hics |      |
+|      | uali | ter, | for  |      |
+|      | za   | line | c    |      |
+|      | tion | and  | ateg |      |
+|      | (    | hist | or   |      |
+|      | when | og   | ical |      |
+|      | to   | rams | and  |      |
+|      | make | with | cont |      |
+|      | w    | e    | in   |      |
+|      | hich | duca | uous |      |
+|      | g    | ti   | data |      |
+|      | raph | onal | u    |      |
+|      | )    | case | sing |      |
+|      |      | s    | R,   |      |
+|      |      | tudy |      |      |
+|      |      | data |      |      |
+|      |      | in g |      |      |
+|      |      | gp   |      |      |
+|      |      | lot2 |      |      |
++------+------+------+------+------+
+| 3    | Lab  | In   | Ap   |      |
+|      | on   | -c   | plic |      |
+|      | ha   | lass | at   |      |
+|      | ving | lab  | ions |      |
+|      | data |      |      |      |
+|      | v    |      |      |      |
+|      | is   |      |      |      |
+|      | uali |      |      |      |
+|      | za   |      |      |      |
+|      | tion |      |      |      |
++------+------+------+------+------+
+| 4    | Data | Le   | Ta   |      |
+| (    | T    | ar   | bles |      |
+| Wedn | ab   | ning | from |      |
+| es   | les, | Data | v    |      |
+| day) | M    | Ta   | ar   |      |
+|      | ea   | bles | ious |      |
+|      | sure | with | PIE  |      |
+|      | of c | R as | res  |      |
+|      | en   | pub  | ou   |      |
+|      | tral | li   | rces |      |
+|      | ten  | shed | and  |      |
+|      | de   | in   | r    |      |
+|      | ncy, | w    | epro |      |
+|      | disp | orld | du   |      |
+|      | er   | l    | cing |      |
+|      | sion | ea   | ta   |      |
+|      |      | ding | bles |      |
+|      |      | o    | like |      |
+|      |      | ut   | 538, |      |
+|      |      | lets | NYT, |      |
+|      |      |      | WSJ, |      |
+|      |      |      | F    |      |
+|      |      |      | T... |      |
++------+------+------+------+------+
+| 4    | -    | In   |      |      |
+|      |    \ | c    |      |      |
+|      | *Lab | lass |      |      |
+|      | \*\* | lab  |      |      |
++------+------+------+------+------+
+| 5 (M | -    | Data | da   |      |
+| on   |  \*E | E    | ta   |      |
+| day) | xplo | xplo | xray |      |
+|      |      | ra   | in R |      |
+|      |   ra | tion |      |      |
+|      | tory | not  |      |      |
+|      |      | in   |      |      |
+|      | Data | mo   |      |      |
+|      |      | nths |      |      |
+|      |   An | /w   |      |      |
+|      |      | eeks |      |      |
+|      |   al | but  |      |      |
+|      | ysis | in m |      |      |
+|      |      | in   |      |      |
+|      |   in | utes |      |      |
+|      |      |      |      |      |
+|      |    R |      |      |      |
+|      |      |      |      |      |
+|      |   in |      |      |      |
+|      |      |      |      |      |
+|      |  min |      |      |      |
+|      |      |      |      |      |
+|      | utes |      |      |      |
+|      | \*\* |      |      |      |
++------+------+------+------+------+
+| 5    | E    | Lab  |      |      |
+| (    | xplo |      |      |      |
+| Wedn | ra   |      |      |      |
+| es   | tory |      |      |      |
+| day) | Data |      |      |      |
+|      | An   |      |      |      |
+|      | al   |      |      |      |
+|      | ysis |      |      |      |
+|      | in R |      |      |      |
++------+------+------+------+------+
+| 6    | Regr | How  |      |      |
+|      | es   | to   |      |      |
+|      | sion | have |      |      |
+|      | /E   | r    |      |      |
+|      | cono | es   |      |      |
+|      | me   | ults |      |      |
+|      | tric | of v |      |      |
+|      | M    | ar   |      |      |
+|      | odel | ious |      |      |
+|      | R    | mo   |      |      |
+|      | es   | dels |      |      |
+|      | ults | like |      |      |
+|      |      | t    |      |      |
+|      |      | hose |      |      |
+|      |      | of l |      |      |
+|      |      | ea   |      |      |
+|      |      | ding |      |      |
+|      |      | jo   |      |      |
+|      |      | ur   |      |      |
+|      |      | nals |      |      |
++------+------+------+------+------+
+| 6    | Lab  |      |      |      |
++------+------+------+------+------+
+| 7 (M | Time | -    |      |      |
+| on   | Se   |  Exp |      |      |
+| day) | ries |      |      |      |
+|      | , Sm |   lo |      |      |
+|      | oo   | ring |      |      |
+|      | thin |      |      |      |
+|      | gE   |      |      |      |
+|      | xpon |  and |      |      |
+|      | en   |      |      |      |
+|      | tial |      |      |      |
+|      | Smo  |    v |      |      |
+|      | ot   | isua |      |      |
+|      | hing |      |      |      |
+|      |      |   li |      |      |
+|      |      | zing |      |      |
+|      |      |      |      |      |
+|      |      |      |      |      |
+|      |      | time |      |      |
+|      |      |      |      |      |
+|      |      | se   |      |      |
+|      |      | ries |      |      |
+|      |      |      |      |      |
+|      |      | -    |      |      |
+|      |      |   Si |      |      |
+|      |      | mple |      |      |
+|      |      |      |      |      |
+|      |      |      |      |      |
+|      |      |  ben |      |      |
+|      |      |      |      |      |
+|      |      |   ch |      |      |
+|      |      | mark |      |      |
+|      |      |      |      |      |
+|      |      |    m |      |      |
+|      |      |      |      |      |
+|      |      |   et |      |      |
+|      |      | hods |      |      |
+|      |      |      |      |      |
+|      |      |      |      |      |
+|      |      |  for |      |      |
+|      |      |      |      |      |
+|      |      |      |      |      |
+|      |      |    f |      |      |
+|      |      | orec |      |      |
+|      |      |      |      |      |
+|      |      |   as |      |      |
+|      |      | ting |      |      |
+|      |      |      |      |      |
+|      |      | -    |      |      |
+|      |      |    D |      |      |
+|      |      |      |      |      |
+|      |      |   ec |      |      |
+|      |      | ompo |      |      |
+|      |      |      |      |      |
+|      |      |   si |      |      |
+|      |      | tion |      |      |
+|      |      |      |      |      |
+|      |      |   of |      |      |
+|      |      |      |      |      |
+|      |      | Se   |      |      |
+|      |      | ries |      |      |
++------+------+------+------+------+
+| 8    | A    |      |      |      |
+| (    | RMA, |      |      |      |
+| Wedn | AR   |      |      |      |
+| es   | IMA, |      |      |      |
+| day) | SA   |      |      |      |
+|      | RIMA |      |      |      |
+|      | mo   |      |      |      |
+|      | del, |      |      |      |
+|      | F    |      |      |      |
+|      | orec |      |      |      |
+|      | as   |      |      |      |
+|      | ting |      |      |      |
++------+------+------+------+------+
+| 9-10 |      | Re   |      |      |
+| (Opt |      | vi   |      |      |
+| io   |      | sion |      |      |
+| nal) |      | of   |      |      |
+|      |      | all  |      |      |
+|      |      | co   |      |      |
+|      |      | nc   |      |      |
+|      |      | epts |      |      |
+|      |      | with |      |      |
+|      |      | pr   |      |      |
+|      |      | ac   |      |      |
+|      |      | tice |      |      |
++------+------+------+------+------+
+
+## New ways of having data and analyzing
+
+### Analyzing Google Trends, Google News API, Media API
+
+Discussion of various sources from where one can read all data directly
+from web API. - Google trends - Google news API - Media API - UN votes
+data from 1948-49 on 6 key issues directly from API till to-date
+(Comparing Pakistan and India ) - Participants feedback for way forward

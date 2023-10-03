@@ -1,0 +1,22 @@
+---
+title: "Quarto mobile friendly"
+format: html
+editor: visual
+---
+
+## Make Quarto docs mobile-friendly 
+
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+
+Column 1
+:::
+::: {.g-col-12 .g-col-md-6}
+
+Column 2 
+
+:::
+
+::::

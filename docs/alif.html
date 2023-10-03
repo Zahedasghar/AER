@@ -1,0 +1,3234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.299">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Alif Ailan and ASER alifailan</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="alif_files/libs/clipboard/clipboard.min.js"></script>
+<script src="alif_files/libs/quarto-html/quarto.js"></script>
+<script src="alif_files/libs/quarto-html/popper.min.js"></script>
+<script src="alif_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="alif_files/libs/quarto-html/anchor.min.js"></script>
+<link href="alif_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="alif_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="alif_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="alif_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="alif_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+</head>
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Alif Ailan and ASER <span class="flow">alifailan</span>
+</h1>
+            <p class="subtitle lead">Zahid Asghar <br> Professor School of Economics</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li>
+<a href="#lesson-plan" id="toc-lesson-plan" class="nav-link active" data-scroll-target="#lesson-plan">Lesson Plan</a>
+  <ul class="collapse">
+<li><a href="#reading-data" id="toc-reading-data" class="nav-link" data-scroll-target="#reading-data">Reading Data</a></li>
+  <li><a href="#using-required-package" id="toc-using-required-package" class="nav-link" data-scroll-target="#using-required-package">Using Required package</a></li>
+  <li><a href="#data-frame" id="toc-data-frame" class="nav-link" data-scroll-target="#data-frame">data frame</a></li>
+  <li><a href="#glimpse-to-have-an-overview-of-data-rows-variables-variables-nature" id="toc-glimpse-to-have-an-overview-of-data-rows-variables-variables-nature" class="nav-link" data-scroll-target="#glimpse-to-have-an-overview-of-data-rows-variables-variables-nature">glimpse (to have an over#View of data, rows, variables, variables nature)</a></li>
+  <li><a href="#structure-of-data-with-str-command-similar-as-glimpse-from-base-r" id="toc-structure-of-data-with-str-command-similar-as-glimpse-from-base-r" class="nav-link" data-scroll-target="#structure-of-data-with-str-command-similar-as-glimpse-from-base-r">structure of data with <code>str</code> command , similar as glimpse from base R</a></li>
+  <li><a href="#head" id="toc-head" class="nav-link" data-scroll-target="#head">head</a></li>
+  <li><a href="#tail" id="toc-tail" class="nav-link" data-scroll-target="#tail">tail</a></li>
+  <li><a href="#view" id="toc-view" class="nav-link" data-scroll-target="#view">#View</a></li>
+  <li><a href="#glimpse-or-str" id="toc-glimpse-or-str" class="nav-link" data-scroll-target="#glimpse-or-str">glimpse() or str()</a></li>
+  <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select">select()</a></li>
+  </ul>
+</li>
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2">ggplot2</a></li>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter">filter()</a></li>
+  <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange">arrange()</a></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate">mutate()</a></li>
+  <li>
+<a href="#summarise-mean-min-max-median-sdq1-q3" id="toc-summarise-mean-min-max-median-sdq1-q3" class="nav-link" data-scroll-target="#summarise-mean-min-max-median-sdq1-q3">summarise (mean, min, max, median, sd,q1, q3)</a>
+  <ul class="collapse">
+<li><a href="#to-change-these-variables-to-nice-format" id="toc-to-change-these-variables-to-nice-format" class="nav-link" data-scroll-target="#to-change-these-variables-to-nice-format">To change these variables to nice format</a></li>
+  <li><a href="#summarise" id="toc-summarise" class="nav-link" data-scroll-target="#summarise">summarise</a></li>
+  <li><a href="#quantitles" id="toc-quantitles" class="nav-link" data-scroll-target="#quantitles">Quantitles</a></li>
+  <li><a href="#summarise-by-year-and-by-province-and-year" id="toc-summarise-by-year-and-by-province-and-year" class="nav-link" data-scroll-target="#summarise-by-year-and-by-province-and-year">Summarise by year, and by province and year</a></li>
+  <li><a href="#which-district-in-each-province-has-minimum-education-score" id="toc-which-district-in-each-province-has-minimum-education-score" class="nav-link" data-scroll-target="#which-district-in-each-province-has-minimum-education-score">Which district in each province has minimum education score</a></li>
+  <li><a href="#to-make-nice-tables-and-quick-summary" id="toc-to-make-nice-tables-and-quick-summary" class="nav-link" data-scroll-target="#to-make-nice-tables-and-quick-summary">To make nice tables and quick summary</a></li>
+  </ul>
+</li>
+  </ul></nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="lesson-plan" class="level2"><h2 class="anchored" data-anchor-id="lesson-plan">Lesson Plan</h2>
+<section id="reading-data" class="level3"><h3 class="anchored" data-anchor-id="reading-data">Reading Data</h3>
+</section><section id="using-required-package" class="level3"><h3 class="anchored" data-anchor-id="using-required-package">Using Required package</h3>
+</section><section id="data-frame" class="level3"><h3 class="anchored" data-anchor-id="data-frame">data frame</h3>
+</section><section id="glimpse-to-have-an-overview-of-data-rows-variables-variables-nature" class="level3"><h3 class="anchored" data-anchor-id="glimpse-to-have-an-overview-of-data-rows-variables-variables-nature">glimpse (to have an over#View of data, rows, variables, variables nature)</h3>
+</section><section id="structure-of-data-with-str-command-similar-as-glimpse-from-base-r" class="level3"><h3 class="anchored" data-anchor-id="structure-of-data-with-str-command-similar-as-glimpse-from-base-r">structure of data with <code>str</code> command , similar as glimpse from base R</h3>
+</section><section id="head" class="level3"><h3 class="anchored" data-anchor-id="head">head</h3>
+</section><section id="tail" class="level3"><h3 class="anchored" data-anchor-id="tail">tail</h3>
+</section><section id="view" class="level3"><h3 class="anchored" data-anchor-id="view">#View</h3>
+</section><section id="glimpse-or-str" class="level3"><h3 class="anchored" data-anchor-id="glimpse-or-str">glimpse() or str()</h3>
+</section><section id="select" class="level3"><h3 class="anchored" data-anchor-id="select">select()</h3>
+</section></section><section id="ggplot2" class="level2"><h2 class="anchored" data-anchor-id="ggplot2">ggplot2</h2>
+</section><section id="filter" class="level2"><h2 class="anchored" data-anchor-id="filter">filter()</h2>
+</section><section id="arrange" class="level2"><h2 class="anchored" data-anchor-id="arrange">arrange()</h2>
+</section><section id="mutate" class="level2"><h2 class="anchored" data-anchor-id="mutate">mutate()</h2>
+</section><section id="summarise-mean-min-max-median-sdq1-q3" class="level2"><h2 class="anchored" data-anchor-id="summarise-mean-min-max-median-sdq1-q3">summarise (mean, min, max, median, sd,q1, q3)</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span> <span class="co">## To read csv file</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor">janitor</a></span><span class="op">)</span><span class="co">## For cleaning data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'janitor'
+
+The following objects are masked from 'package:stats':
+
+    chisq.test, fisher.test</code></pre>
+</div>
+</div>
+<p>Now read data of ASER and Alifailan 2013-2016. You can download data from https://github.com/Zahedasghar/AER/blob/main/data/alif_aser.csv</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/edu_data_kaggle.csv"</span><span class="op">)</span>   <span class="co">## Read csv file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 580 Columns: 51
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (17): % Boys Enrolled, % Girls Enrolled, All Four Facilities, Any One Fa...
+dbl (33): % Complete Primary Schools, % Primary Schools with single classroo...
+num  (1): Other Factors Measure Value
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span><span class="co">## To have over#View of data    </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 580
+Columns: 51
+$ `% Boys Enrolled`                                                                      &lt;chr&gt; …
+$ `% Complete Primary Schools`                                                           &lt;dbl&gt; …
+$ `% Girls Enrolled`                                                                     &lt;chr&gt; …
+$ `% Primary Schools with single classroom`                                              &lt;dbl&gt; …
+$ `% Primary Schools with single teacher`                                                &lt;dbl&gt; …
+$ `All Four Facilities`                                                                  &lt;chr&gt; …
+$ `Any One Facility`                                                                     &lt;chr&gt; …
+$ `Any Three Facilities`                                                                 &lt;chr&gt; …
+$ `Any Two Facilities`                                                                   &lt;chr&gt; …
+$ `Area (km²)`                                                                           &lt;dbl&gt; …
+$ `Bomb Blasts Occurred`                                                                 &lt;dbl&gt; …
+$ `Boundary wall, Building condition satisfactory, Drinking water and 2 more (clusters)` &lt;chr&gt; …
+$ `Boundary wall`                                                                        &lt;dbl&gt; …
+$ `Building condition satisfactory`                                                      &lt;dbl&gt; …
+$ `MeasureGroup 1 Measures`                                                              &lt;dbl&gt; …
+$ `Color By Measure Value`                                                               &lt;dbl&gt; …
+$ `Show Sheet`                                                                           &lt;chr&gt; …
+$ `Table of Contents`                                                                    &lt;chr&gt; …
+$ `Other Factors Measure Value`                                                          &lt;dbl&gt; …
+$ `Analysis Level Selector`                                                              &lt;chr&gt; …
+$ `Color By Measure Name`                                                                &lt;chr&gt; …
+$ `Complete Primary Schools`                                                             &lt;dbl&gt; …
+$ Country                                                                                &lt;chr&gt; …
+$ City                                                                                   &lt;chr&gt; …
+$ `Drinking water`                                                                       &lt;dbl&gt; …
+$ `Drone attacks in Pakistan`                                                            &lt;dbl&gt; …
+$ `Education score`                                                                      &lt;dbl&gt; …
+$ `Educational Budget Spend of GDP`                                                      &lt;chr&gt; …
+$ Electricity                                                                            &lt;dbl&gt; …
+$ `Enrolment score`                                                                      &lt;dbl&gt; …
+$ `Gender parity score`                                                                  &lt;dbl&gt; …
+$ `Global Terrorism Index - Pakistan`                                                    &lt;dbl&gt; …
+$ `Learning score`                                                                       &lt;dbl&gt; …
+$ `MeasureGroup 2 Measures`                                                              &lt;dbl&gt; …
+$ `No Facility`                                                                          &lt;chr&gt; …
+$ `Number of Records`                                                                    &lt;dbl&gt; …
+$ `Number of primary schools as % of total schools`                                      &lt;dbl&gt; …
+$ `Number of primary schools`                                                            &lt;dbl&gt; …
+$ `Number of secondary schools as % of total schools`                                    &lt;dbl&gt; …
+$ `Number of secondary schools`                                                          &lt;dbl&gt; …
+$ `Pakistan Economic Growth`                                                             &lt;chr&gt; …
+$ Population                                                                             &lt;dbl&gt; …
+$ `Primary Schools with single classroom`                                                &lt;dbl&gt; …
+$ `Primary Schools with single teacher`                                                  &lt;dbl&gt; …
+$ Province                                                                               &lt;chr&gt; …
+$ `Retention score`                                                                      &lt;dbl&gt; …
+$ `School infrastructure score`                                                          &lt;dbl&gt; …
+$ `Terrorist Attacks Affectees`                                                          &lt;dbl&gt; …
+$ Toilet                                                                                 &lt;dbl&gt; …
+$ `Total number of schools`                                                              &lt;dbl&gt; …
+$ Year                                                                                   &lt;dbl&gt; …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#View(edf)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="to-change-these-variables-to-nice-format" class="level3"><h3 class="anchored" data-anchor-id="to-change-these-variables-to-nice-format">To change these variables to nice format</h3>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 580 × 51
+   percent_boys_enrolled percent_complete_primary_schools percent_girls_enrolled
+   &lt;chr&gt;                                            &lt;dbl&gt; &lt;chr&gt;                 
+ 1 54.77%                                           0.937 45.23%                
+ 2 62.50%                                           0.594 37.50%                
+ 3 86.63%                                           0.939 13.37%                
+ 4 60.77%                                           0.827 39.23%                
+ 5 60.75%                                           0.592 39.25%                
+ 6 58.48%                                           0.582 41.52%                
+ 7 68.36%                                           0.941 31.64%                
+ 8 80.78%                                           0.737 19.22%                
+ 9 62.60%                                           0.847 37.40%                
+10 57.87%                                           0.707 42.13%                
+# ℹ 570 more rows
+# ℹ 48 more variables: percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   all_four_facilities &lt;chr&gt;, any_one_facility &lt;chr&gt;,
+#   any_three_facilities &lt;chr&gt;, any_two_facilities &lt;chr&gt;, area_km2 &lt;dbl&gt;,
+#   bomb_blasts_occurred &lt;dbl&gt;,
+#   boundary_wall_building_condition_satisfactory_drinking_water_and_2_more_clusters &lt;chr&gt;, …</code></pre>
+</div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span>  <span class="co">#View()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 580 × 51
+   percent_boys_enrolled percent_complete_primary_schools percent_girls_enrolled
+   &lt;chr&gt;                                            &lt;dbl&gt; &lt;chr&gt;                 
+ 1 54.77%                                           0.937 45.23%                
+ 2 62.50%                                           0.594 37.50%                
+ 3 86.63%                                           0.939 13.37%                
+ 4 60.77%                                           0.827 39.23%                
+ 5 60.75%                                           0.592 39.25%                
+ 6 58.48%                                           0.582 41.52%                
+ 7 68.36%                                           0.941 31.64%                
+ 8 80.78%                                           0.737 19.22%                
+ 9 62.60%                                           0.847 37.40%                
+10 57.87%                                           0.707 42.13%                
+# ℹ 570 more rows
+# ℹ 48 more variables: percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   all_four_facilities &lt;chr&gt;, any_one_facility &lt;chr&gt;,
+#   any_three_facilities &lt;chr&gt;, any_two_facilities &lt;chr&gt;, area_km2 &lt;dbl&gt;,
+#   bomb_blasts_occurred &lt;dbl&gt;,
+#   boundary_wall_building_condition_satisfactory_drinking_water_and_2_more_clusters &lt;chr&gt;, …</code></pre>
+</div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Assign this data name as edf_c</span></span>
+<span></span>
+<span><span class="va">edf</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://sfirke.github.io/janitor/reference/clean_names.html">clean_names</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">edf_c</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Lets take year, province and city as first three and rename city as district</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_c</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">city</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 580 × 51
+    year province city         percent_boys_enrolled percent_complete_primary_…¹
+   &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;                                       &lt;dbl&gt;
+ 1  2013 AJK      Bagh         54.77%                                      0.937
+ 2  2013 AJK      Bhimber      62.50%                                      0.594
+ 3  2013 AJK      Hattian      86.63%                                      0.939
+ 4  2013 AJK      Haveli       60.77%                                      0.827
+ 5  2013 AJK      Kotli        60.75%                                      0.592
+ 6  2013 AJK      Mirpur       58.48%                                      0.582
+ 7  2013 AJK      Muzaffarabad 68.36%                                      0.941
+ 8  2013 AJK      Neelum       80.78%                                      0.737
+ 9  2013 AJK      Poonch       62.60%                                      0.847
+10  2013 AJK      Sudhnutti    57.87%                                      0.707
+# ℹ 570 more rows
+# ℹ abbreviated name: ¹​percent_complete_primary_schools
+# ℹ 46 more variables: percent_girls_enrolled &lt;chr&gt;,
+#   percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   all_four_facilities &lt;chr&gt;, any_one_facility &lt;chr&gt;,
+#   any_three_facilities &lt;chr&gt;, any_two_facilities &lt;chr&gt;, area_km2 &lt;dbl&gt;, …</code></pre>
+</div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Lets assign this data as </span></span>
+<span> <span class="va">edf_c</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">city</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>district<span class="op">=</span><span class="va">city</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">edu_df</span></span>
+<span></span>
+<span><span class="co">## Use select to have variables containing percent </span></span>
+<span> </span>
+<span> <span class="co">#View(edu_df)</span></span>
+<span> </span>
+<span> <span class="va">edu_df</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">contains</a></span><span class="op">(</span><span class="st">"percent"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 580 × 7
+   percent_boys_enrolled percent_complete_primary_schools percent_girls_enrolled
+   &lt;chr&gt;                                            &lt;dbl&gt; &lt;chr&gt;                 
+ 1 54.77%                                           0.937 45.23%                
+ 2 62.50%                                           0.594 37.50%                
+ 3 86.63%                                           0.939 13.37%                
+ 4 60.77%                                           0.827 39.23%                
+ 5 60.75%                                           0.592 39.25%                
+ 6 58.48%                                           0.582 41.52%                
+ 7 68.36%                                           0.941 31.64%                
+ 8 80.78%                                           0.737 19.22%                
+ 9 62.60%                                           0.847 37.40%                
+10 57.87%                                           0.707 42.13%                
+# ℹ 570 more rows
+# ℹ 4 more variables: percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   number_of_primary_schools_as_percent_of_total_schools &lt;dbl&gt;,
+#   number_of_secondary_schools_as_percent_of_total_schools &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_df</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">ends_with</a></span><span class="op">(</span><span class="st">"score"</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 580 × 6
+   education_score enrolment_score gender_parity_score learning_score
+             &lt;dbl&gt;           &lt;dbl&gt;               &lt;dbl&gt;          &lt;dbl&gt;
+ 1            64.9            81.8                95.2           67.8
+ 2            74.5            80.3                87.5           54.9
+ 3            47.6            78.8                63.4           48.2
+ 4            53.0            80.8                89.2           42.1
+ 5            69.4            78.8                89.2           36.4
+ 6            71.8            76.8                91.5           47.5
+ 7            56.0            77.9                81.6           50.4
+ 8            67.3            74.7                69.2           55.4
+ 9            82.9            78.8                87.4           77.6
+10            74.8            79.3                92.1           42  
+# ℹ 570 more rows
+# ℹ 2 more variables: retention_score &lt;dbl&gt;, school_infrastructure_score &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p><strong>Lets assing this data as scores</strong></p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">&lt;-</span> <span class="va">edu_df</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="co">#Distinct years</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 1
+   year
+  &lt;dbl&gt;
+1  2013
+2  2014
+3  2015
+4  2016</code></pre>
+</div>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">|&gt;</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2013</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">district</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1   145</code></pre>
+</div>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">district</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 2
+# Groups:   province [8]
+  province        n
+  &lt;chr&gt;       &lt;int&gt;
+1 AJK            10
+2 Balochistan    30
+3 FATA           13
+4 GB              7
+5 ICT             1
+6 KP             25
+7 Punjab         36
+8 Sindh          23</code></pre>
+</div>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">district</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="op">-</span><span class="va">n</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 2
+# Groups:   province [8]
+  province        n
+  &lt;chr&gt;       &lt;int&gt;
+1 Punjab         36
+2 Balochistan    30
+3 KP             25
+4 Sindh          23
+5 FATA           13
+6 AJK            10
+7 GB              7
+8 ICT             1</code></pre>
+</div>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Count year and district province wise</span></span>
+<span></span>
+<span><span class="va">edf_c</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">year</span>,<span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 32 × 3
+    year province        n
+   &lt;dbl&gt; &lt;chr&gt;       &lt;int&gt;
+ 1  2013 AJK            10
+ 2  2013 Balochistan    30
+ 3  2013 FATA           13
+ 4  2013 GB              7
+ 5  2013 ICT             1
+ 6  2013 KP             25
+ 7  2013 Punjab         36
+ 8  2013 Sindh          23
+ 9  2014 AJK            10
+10  2014 Balochistan    30
+# ℹ 22 more rows</code></pre>
+</div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_c</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">year</span>,<span class="va">province</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>n<span class="op">=</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1    32</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Filter only for year 2014 </span></span>
+<span><span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2014</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fl">4</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 51
+   year province district percent_boys_enrolled percent_complete_primary_schools
+  &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;                                            &lt;dbl&gt;
+1  2014 AJK      Bagh     63.49%                                           0.937
+2  2014 AJK      Bhimber  71.06%                                           0.594
+3  2014 AJK      Hattian  56.31%                                           0.939
+4  2014 AJK      Haveli   55.46%                                           0.827
+# ℹ 46 more variables: percent_girls_enrolled &lt;chr&gt;,
+#   percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   all_four_facilities &lt;chr&gt;, any_one_facility &lt;chr&gt;,
+#   any_three_facilities &lt;chr&gt;, any_two_facilities &lt;chr&gt;, area_km2 &lt;dbl&gt;,
+#   bomb_blasts_occurred &lt;dbl&gt;,
+#   boundary_wall_building_condition_satisfactory_drinking_water_and_2_more_clusters &lt;chr&gt;, …</code></pre>
+</div>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2014</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">103</span><span class="op">:</span><span class="fl">108</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 51
+   year province district        percent_boys_enrolled percent_complete_primar…¹
+  &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;                                     &lt;dbl&gt;
+1  2014 Punjab   Lahore          57.63%                                    0.897
+2  2014 Punjab   Layyah          71.68%                                    0.707
+3  2014 Punjab   Lodhran         71.93%                                    0.855
+4  2014 Punjab   Mandi Bahauddin 61.78%                                   NA    
+5  2014 Punjab   Mianwali        61.07%                                    0.799
+6  2014 Punjab   Multan          72.85%                                    0.872
+# ℹ abbreviated name: ¹​percent_complete_primary_schools
+# ℹ 46 more variables: percent_girls_enrolled &lt;chr&gt;,
+#   percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   all_four_facilities &lt;chr&gt;, any_one_facility &lt;chr&gt;,
+#   any_three_facilities &lt;chr&gt;, any_two_facilities &lt;chr&gt;, area_km2 &lt;dbl&gt;,
+#   bomb_blasts_occurred &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<p>Minimum rention score district wise</p>
+<div class="cell">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">retention_score</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2013</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">retention_score</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">retention_score</span><span class="op">)</span>, .by<span class="op">=</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 51
+    year province    district              retention_score percent_boys_enrolled
+   &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;                           &lt;dbl&gt; &lt;chr&gt;                
+ 1  2013 AJK         Hattian                           0   86.63%               
+ 2  2013 AJK         Haveli                            0   60.77%               
+ 3  2013 Balochistan Musakhail                        13.6 90.33%               
+ 4  2013 FATA        South Waziristan Age…             0   100.00%              
+ 5  2013 GB          Astor                             0   100.00%              
+ 6  2013 GB          Ghizer                            0   89.19%               
+ 7  2013 ICT         Islamabad                        76   55.60%               
+ 8  2013 KP          Tor Ghar                          0   &lt;NA&gt;                 
+ 9  2013 Punjab      Rajanpur                         18   100.00%              
+10  2013 Sindh       Thatta                           15.2 86.71%               
+# ℹ 46 more variables: percent_complete_primary_schools &lt;dbl&gt;,
+#   percent_girls_enrolled &lt;chr&gt;,
+#   percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   all_four_facilities &lt;chr&gt;, any_one_facility &lt;chr&gt;,
+#   any_three_facilities &lt;chr&gt;, any_two_facilities &lt;chr&gt;, area_km2 &lt;dbl&gt;,
+#   bomb_blasts_occurred &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">education_score</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2013</span>, <span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"KP"</span>,<span class="st">"Balochistan"</span>, <span class="st">"Sindh"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">education_score</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">education_score</span><span class="op">)</span>, .by<span class="op">=</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 51
+   year province    district            education_score percent_boys_enrolled
+  &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;                         &lt;dbl&gt; &lt;chr&gt;                
+1  2013 Balochistan Dera Bugti                     25.7 100.00%              
+2  2013 KP          Tor Ghar                       26.5 &lt;NA&gt;                 
+3  2013 Punjab      Rajanpur                       43.4 100.00%              
+4  2013 Sindh       Tando Muhammad Khan            38.5 93.37%               
+# ℹ 46 more variables: percent_complete_primary_schools &lt;dbl&gt;,
+#   percent_girls_enrolled &lt;chr&gt;,
+#   percent_primary_schools_with_single_classroom &lt;dbl&gt;,
+#   percent_primary_schools_with_single_teacher &lt;dbl&gt;,
+#   all_four_facilities &lt;chr&gt;, any_one_facility &lt;chr&gt;,
+#   any_three_facilities &lt;chr&gt;, any_two_facilities &lt;chr&gt;, area_km2 &lt;dbl&gt;,
+#   bomb_blasts_occurred &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">&lt;-</span> <span class="va">edu_sc</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">contains</a></span><span class="op">(</span><span class="st">"score"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 580
+Columns: 9
+$ year                        &lt;dbl&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, …
+$ province                    &lt;chr&gt; "AJK", "AJK", "AJK", "AJK", "AJK", "AJK", …
+$ district                    &lt;chr&gt; "Bagh", "Bhimber", "Hattian", "Haveli", "K…
+$ education_score             &lt;dbl&gt; 64.89409, 74.48361, 47.57908, 53.02104, 69…
+$ enrolment_score             &lt;dbl&gt; 81.75000, 80.33333, 78.75000, 80.75000, 78…
+$ gender_parity_score         &lt;dbl&gt; 95.22637, 87.50111, 63.36634, 89.23417, 89…
+$ learning_score              &lt;dbl&gt; 67.80000, 54.90000, 48.20000, 42.10000, 36…
+$ retention_score             &lt;dbl&gt; 14.8, 75.2, 0.0, 0.0, 73.2, 71.2, 14.0, 70…
+$ school_infrastructure_score &lt;dbl&gt; 24.929178, 28.883827, 22.463768, 13.048128…</code></pre>
+</div>
+</div>
+</section><section id="summarise" class="level3"><h3 class="anchored" data-anchor-id="summarise">summarise</h3>
+<div class="cell">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">edf_short</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      year        province           district         education_score 
+ Min.   :2013   Length:580         Length:580         Min.   : 8.729  
+ 1st Qu.:2014   Class :character   Class :character   1st Qu.:51.710  
+ Median :2014   Mode  :character   Mode  :character   Median :62.505  
+ Mean   :2014                                         Mean   :61.147  
+ 3rd Qu.:2015                                         3rd Qu.:72.143  
+ Max.   :2016                                         Max.   :86.800  
+ enrolment_score  gender_parity_score learning_score  retention_score 
+ Min.   :  0.00   Min.   : 0.00       Min.   : 0.00   Min.   :  0.00  
+ 1st Qu.: 52.55   1st Qu.:68.32       1st Qu.:36.83   1st Qu.: 40.09  
+ Median : 67.33   Median :79.41       Median :51.68   Median : 57.05  
+ Mean   : 64.28   Mean   :76.81       Mean   :49.00   Mean   : 55.16  
+ 3rd Qu.: 77.93   3rd Qu.:88.97       3rd Qu.:61.70   3rd Qu.: 71.15  
+ Max.   :100.00   Max.   :99.30       Max.   :87.33   Max.   :100.00  
+ school_infrastructure_score
+ Min.   : 0.00              
+ 1st Qu.:32.35              
+ Median :52.50              
+ Mean   :54.65              
+ 3rd Qu.:80.40              
+ Max.   :98.60              </code></pre>
+</div>
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/skimr/">skimr</a></span><span class="op">)</span></span>
+<span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">edf_short</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">580</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: character</strong></p>
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 13%">
+<col style="width: 19%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 15%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">min</th>
+<th style="text-align: right;">max</th>
+<th style="text-align: right;">empty</th>
+<th style="text-align: right;">n_unique</th>
+<th style="text-align: right;">whitespace</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">province</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">district</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 7%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 5%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2014.50</td>
+<td style="text-align: right;">1.12</td>
+<td style="text-align: right;">2013.00</td>
+<td style="text-align: right;">2013.75</td>
+<td style="text-align: right;">2014.50</td>
+<td style="text-align: right;">2015.25</td>
+<td style="text-align: right;">2016.00</td>
+<td style="text-align: left;">▇▇▁▇▇</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">education_score</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">61.15</td>
+<td style="text-align: right;">13.64</td>
+<td style="text-align: right;">8.73</td>
+<td style="text-align: right;">51.71</td>
+<td style="text-align: right;">62.50</td>
+<td style="text-align: right;">72.14</td>
+<td style="text-align: right;">86.80</td>
+<td style="text-align: left;">▁▂▆▇▆</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">64.28</td>
+<td style="text-align: right;">18.45</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">52.55</td>
+<td style="text-align: right;">67.33</td>
+<td style="text-align: right;">77.93</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: left;">▁▁▆▇▃</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gender_parity_score</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">76.81</td>
+<td style="text-align: right;">15.23</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">68.32</td>
+<td style="text-align: right;">79.41</td>
+<td style="text-align: right;">88.97</td>
+<td style="text-align: right;">99.30</td>
+<td style="text-align: left;">▁▁▂▆▇</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">49.00</td>
+<td style="text-align: right;">17.59</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">36.83</td>
+<td style="text-align: right;">51.68</td>
+<td style="text-align: right;">61.70</td>
+<td style="text-align: right;">87.33</td>
+<td style="text-align: left;">▁▃▆▇▂</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">retention_score</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">55.16</td>
+<td style="text-align: right;">20.94</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">40.09</td>
+<td style="text-align: right;">57.05</td>
+<td style="text-align: right;">71.15</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: left;">▂▅▇▇▃</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">school_infrastructure_score</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">54.65</td>
+<td style="text-align: right;">25.60</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">32.35</td>
+<td style="text-align: right;">52.50</td>
+<td style="text-align: right;">80.40</td>
+<td style="text-align: right;">98.60</td>
+<td style="text-align: left;">▂▇▆▅▇</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2014</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">province</span>, <span class="va">enrolment_score</span>, <span class="va">learning_score</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">group_by(…)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">145</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">province</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: left;">province</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">AJK</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">70.34</td>
+<td style="text-align: right;">18.20</td>
+<td style="text-align: right;">46.42</td>
+<td style="text-align: right;">53.78</td>
+<td style="text-align: right;">71.22</td>
+<td style="text-align: right;">88.24</td>
+<td style="text-align: right;">89.39</td>
+<td style="text-align: left;">▆▃▁▂▇</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">Balochistan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">52.96</td>
+<td style="text-align: right;">17.39</td>
+<td style="text-align: right;">8.82</td>
+<td style="text-align: right;">43.28</td>
+<td style="text-align: right;">50.22</td>
+<td style="text-align: right;">63.50</td>
+<td style="text-align: right;">97.00</td>
+<td style="text-align: left;">▁▅▇▅▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">FATA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">54.14</td>
+<td style="text-align: right;">18.29</td>
+<td style="text-align: right;">25.00</td>
+<td style="text-align: right;">40.26</td>
+<td style="text-align: right;">52.00</td>
+<td style="text-align: right;">70.34</td>
+<td style="text-align: right;">84.36</td>
+<td style="text-align: left;">▃▇▆▃▃</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">GB</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">62.92</td>
+<td style="text-align: right;">15.16</td>
+<td style="text-align: right;">39.34</td>
+<td style="text-align: right;">56.68</td>
+<td style="text-align: right;">61.24</td>
+<td style="text-align: right;">71.33</td>
+<td style="text-align: right;">83.83</td>
+<td style="text-align: left;">▂▂▇▁▅</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">ICT</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">62.01</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">62.01</td>
+<td style="text-align: right;">62.01</td>
+<td style="text-align: right;">62.01</td>
+<td style="text-align: right;">62.01</td>
+<td style="text-align: right;">62.01</td>
+<td style="text-align: left;">▁▁▇▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">KP</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">54.52</td>
+<td style="text-align: right;">13.29</td>
+<td style="text-align: right;">30.44</td>
+<td style="text-align: right;">44.15</td>
+<td style="text-align: right;">55.23</td>
+<td style="text-align: right;">62.44</td>
+<td style="text-align: right;">88.25</td>
+<td style="text-align: left;">▃▅▇▂▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">Punjab</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">61.12</td>
+<td style="text-align: right;">12.51</td>
+<td style="text-align: right;">39.11</td>
+<td style="text-align: right;">53.35</td>
+<td style="text-align: right;">57.77</td>
+<td style="text-align: right;">66.64</td>
+<td style="text-align: right;">99.00</td>
+<td style="text-align: left;">▃▇▆▂▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">enrolment_score</td>
+<td style="text-align: left;">Sindh</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">51.02</td>
+<td style="text-align: right;">14.05</td>
+<td style="text-align: right;">32.12</td>
+<td style="text-align: right;">40.44</td>
+<td style="text-align: right;">47.00</td>
+<td style="text-align: right;">55.52</td>
+<td style="text-align: right;">78.74</td>
+<td style="text-align: left;">▆▇▃▁▃</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">AJK</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">71.67</td>
+<td style="text-align: right;">7.42</td>
+<td style="text-align: right;">60.74</td>
+<td style="text-align: right;">65.68</td>
+<td style="text-align: right;">72.13</td>
+<td style="text-align: right;">77.37</td>
+<td style="text-align: right;">82.70</td>
+<td style="text-align: left;">▇▇▇▇▇</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">Balochistan</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">54.21</td>
+<td style="text-align: right;">12.91</td>
+<td style="text-align: right;">27.80</td>
+<td style="text-align: right;">45.16</td>
+<td style="text-align: right;">52.84</td>
+<td style="text-align: right;">64.42</td>
+<td style="text-align: right;">76.68</td>
+<td style="text-align: left;">▃▇▇▇▇</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">FATA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">53.47</td>
+<td style="text-align: right;">18.19</td>
+<td style="text-align: right;">22.00</td>
+<td style="text-align: right;">47.06</td>
+<td style="text-align: right;">49.92</td>
+<td style="text-align: right;">72.13</td>
+<td style="text-align: right;">82.13</td>
+<td style="text-align: left;">▂▁▇▁▅</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">GB</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">63.35</td>
+<td style="text-align: right;">15.67</td>
+<td style="text-align: right;">41.83</td>
+<td style="text-align: right;">51.56</td>
+<td style="text-align: right;">69.18</td>
+<td style="text-align: right;">71.00</td>
+<td style="text-align: right;">87.33</td>
+<td style="text-align: left;">▅▂▁▇▂</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">ICT</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">65.80</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">65.80</td>
+<td style="text-align: right;">65.80</td>
+<td style="text-align: right;">65.80</td>
+<td style="text-align: right;">65.80</td>
+<td style="text-align: right;">65.80</td>
+<td style="text-align: left;">▁▁▇▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">KP</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">56.17</td>
+<td style="text-align: right;">10.60</td>
+<td style="text-align: right;">31.88</td>
+<td style="text-align: right;">52.96</td>
+<td style="text-align: right;">57.70</td>
+<td style="text-align: right;">62.16</td>
+<td style="text-align: right;">73.83</td>
+<td style="text-align: left;">▂▂▅▇▃</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">Punjab</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">69.89</td>
+<td style="text-align: right;">10.09</td>
+<td style="text-align: right;">46.14</td>
+<td style="text-align: right;">62.02</td>
+<td style="text-align: right;">72.83</td>
+<td style="text-align: right;">76.78</td>
+<td style="text-align: right;">85.04</td>
+<td style="text-align: left;">▂▂▅▇▃</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">learning_score</td>
+<td style="text-align: left;">Sindh</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">57.70</td>
+<td style="text-align: right;">5.79</td>
+<td style="text-align: right;">48.45</td>
+<td style="text-align: right;">52.45</td>
+<td style="text-align: right;">57.30</td>
+<td style="text-align: right;">60.84</td>
+<td style="text-align: right;">67.25</td>
+<td style="text-align: left;">▅▇▅▇▅</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"Balochistan"</span>,<span class="st">"Sindh"</span>, <span class="st">"KP"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>, </span>
+<span>                      q1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span>,</span>
+<span>                       med_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>                       q3<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span>,</span>
+<span>                       min_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>                       max_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>                  </span>
+<span>                       sd<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>                       .by<span class="op">=</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 8
+  province    mean_learn    q1 med_learn    q3 min_learn max_learn    sd
+  &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1 Balochistan       38.3  22.1      37.3  51.5       6.1      76.7 17.4 
+2 KP                47.5  37.8      47.5  56.3      25.0      73.8 11.8 
+3 Punjab            62.1  56.2      61.9  68.5      11.2      85.0  9.98
+4 Sindh             41.6  32.2      38.7  50.5      17.1      67.9 12.7 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"Balochistan"</span>,<span class="st">"Sindh"</span>, <span class="st">"KP"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
+<span>            mean_inf<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,</span>
+<span>            med_inf<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,</span>
+<span>           q3<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span>,probs <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span>,</span>
+<span>            min_inf<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,</span>
+<span>            max_inf<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,</span>
+<span>           </span>
+<span>            sd<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,.by<span class="op">=</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 7
+  province    mean_inf med_inf    q3 min_inf max_inf    sd
+  &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1 Balochistan     29.1    28.1  36.4    5.49    58.6 10.7 
+2 KP              67.7    72.8  81.5    0       98.6 18.6 
+3 Punjab          84.5    87.6  91.2   41.8     95.8  9.68
+4 Sindh           49.2    48.7  59.6   18.8     76.4 14.1 </code></pre>
+</div>
+</div>
+</section><section id="quantitles" class="level3"><h3 class="anchored" data-anchor-id="quantitles">Quantitles</h3>
+<div class="cell">
+<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"Balochistan"</span>,<span class="st">"Sindh"</span>, <span class="st">"KP"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>q1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span>,</span>
+<span>          med_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>          min_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>          max_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>          sd<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>          .by<span class="op">=</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 6
+  province       q1 med_learn min_learn max_learn    sd
+  &lt;chr&gt;       &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1 Balochistan  22.1      37.3       6.1      76.7 17.4 
+2 KP           37.8      47.5      25.0      73.8 11.8 
+3 Punjab       56.2      61.9      11.2      85.0  9.98
+4 Sindh        32.2      38.7      17.1      67.9 12.7 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"Balochistan"</span>,<span class="st">"Sindh"</span>, <span class="st">"KP"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
+<span>    q1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span>,probs <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span>,</span>
+<span>    med_inf<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,</span>
+<span>    q3<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span>,probs <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span>,</span>
+<span>    min_inf<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,</span>
+<span>    max_inf<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">school_infrastructure_score</span><span class="op">)</span>,</span>
+<span>   .by<span class="op">=</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 6
+  province       q1 med_inf    q3 min_inf max_inf
+  &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 Balochistan  20.7    28.1  36.4    5.49    58.6
+2 KP           56.7    72.8  81.5    0       98.6
+3 Punjab       81.9    87.6  91.2   41.8     95.8
+4 Sindh        38.9    48.7  59.6   18.8     76.4</code></pre>
+</div>
+</div>
+</section><section id="summarise-by-year-and-by-province-and-year" class="level3"><h3 class="anchored" data-anchor-id="summarise-by-year-and-by-province-and-year">Summarise by year, and by province and year</h3>
+<div class="cell">
+<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"Balochistan"</span>,<span class="st">"Sindh"</span>, <span class="st">"KP"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>, </span>
+<span>            q1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span>,</span>
+<span>            med_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            q3<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span>,</span>
+<span>            min_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            max_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            </span>
+<span>            sd<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            .by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">year</span>,<span class="va">province</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 9
+    year province    mean_learn    q1 med_learn    q3 min_learn max_learn    sd
+   &lt;dbl&gt; &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1  2013 Balochistan       32.6  19.8      30.1  47.5      14.8      59.0 14.0 
+ 2  2013 KP                45.6  38.3      46.9  51.8      26        63.5 10.6 
+ 3  2013 Punjab            60.8  57.6      60.2  65.1      48.8      70.1  5.63
+ 4  2013 Sindh             35.8  30.9      37.0  39.4      20.7      48.7  7.24
+ 5  2014 Balochistan       54.2  45.2      52.8  64.4      27.8      76.7 12.9 
+ 6  2014 KP                56.2  53.0      57.7  62.2      31.9      73.8 10.6 
+ 7  2014 Punjab            69.9  62.0      72.8  76.8      46.1      85.0 10.1 
+ 8  2014 Sindh             57.7  52.5      57.3  60.8      48.4      67.3  5.79
+ 9  2015 Balochistan       31.3  17.9      27.8  42.3       6.1      70.1 17.8 
+10  2015 KP                43.4  37.3      41.1  52.1      25.0      63.3  9.77
+11  2015 Punjab            56.8  51.8      56.6  63.6      11.2      76.0 11.5 
+12  2015 Sindh             35.4  28.4      34.1  42.5      17.1      66.2 11.3 
+13  2016 Balochistan       35.1  21.9      36.8  45.7      12.2      60.3 14.4 
+14  2016 KP                45.0  33.0      45.2  54.6      27.4      67.2 12.3 
+15  2016 Punjab            60.8  56.4      60.4  65.5      43.8      71.2  6.90
+16  2016 Sindh             37.7  32.7      35.2  42.2      24.2      67.9  9.38</code></pre>
+</div>
+<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"Balochistan"</span>,<span class="st">"Sindh"</span>, <span class="st">"KP"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>, </span>
+<span>            q1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span>,</span>
+<span>            med_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            q3<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span>,</span>
+<span>            min_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            max_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            </span>
+<span>            sd<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            .by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">province</span>,<span class="va">year</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 9
+   province     year mean_learn    q1 med_learn    q3 min_learn max_learn    sd
+   &lt;chr&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Balochistan  2013       32.6  19.8      30.1  47.5      14.8      59.0 14.0 
+ 2 KP           2013       45.6  38.3      46.9  51.8      26        63.5 10.6 
+ 3 Punjab       2013       60.8  57.6      60.2  65.1      48.8      70.1  5.63
+ 4 Sindh        2013       35.8  30.9      37.0  39.4      20.7      48.7  7.24
+ 5 Balochistan  2014       54.2  45.2      52.8  64.4      27.8      76.7 12.9 
+ 6 KP           2014       56.2  53.0      57.7  62.2      31.9      73.8 10.6 
+ 7 Punjab       2014       69.9  62.0      72.8  76.8      46.1      85.0 10.1 
+ 8 Sindh        2014       57.7  52.5      57.3  60.8      48.4      67.3  5.79
+ 9 Balochistan  2015       31.3  17.9      27.8  42.3       6.1      70.1 17.8 
+10 KP           2015       43.4  37.3      41.1  52.1      25.0      63.3  9.77
+11 Punjab       2015       56.8  51.8      56.6  63.6      11.2      76.0 11.5 
+12 Sindh        2015       35.4  28.4      34.1  42.5      17.1      66.2 11.3 
+13 Balochistan  2016       35.1  21.9      36.8  45.7      12.2      60.3 14.4 
+14 KP           2016       45.0  33.0      45.2  54.6      27.4      67.2 12.3 
+15 Punjab       2016       60.8  56.4      60.4  65.5      43.8      71.2  6.90
+16 Sindh        2016       37.7  32.7      35.2  42.2      24.2      67.9  9.38</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op">==</span><span class="st">"Sindh"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>, </span>
+<span>            q1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span>,</span>
+<span>            med_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            q3<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">learning_score</span>,probs <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span>,</span>
+<span>            min_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            max_learn<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            </span>
+<span>            sd<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">learning_score</span><span class="op">)</span>,</span>
+<span>            .by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">province</span>,<span class="va">year</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 9
+  province  year mean_learn    q1 med_learn    q3 min_learn max_learn    sd
+  &lt;chr&gt;    &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1 Sindh     2013       35.8  30.9      37.0  39.4      20.7      48.7  7.24
+2 Sindh     2014       57.7  52.5      57.3  60.8      48.4      67.3  5.79
+3 Sindh     2015       35.4  28.4      34.1  42.5      17.1      66.2 11.3 
+4 Sindh     2016       37.7  32.7      35.2  42.2      24.2      67.9  9.38</code></pre>
+</div>
+</div>
+</section><section id="which-district-in-each-province-has-minimum-education-score" class="level3"><h3 class="anchored" data-anchor-id="which-district-in-each-province-has-minimum-education-score">Which district in each province has minimum education score</h3>
+<div class="cell">
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">education_score</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2013</span>, <span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,</span>
+<span>                                                                                                                 <span class="st">"KP"</span>,<span class="st">"Balochistan"</span>, <span class="st">"Sindh"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">education_score</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">education_score</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 9
+# Groups:   province [4]
+   year province    district education_score enrolment_score gender_parity_score
+  &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;              &lt;dbl&gt;           &lt;dbl&gt;               &lt;dbl&gt;
+1  2013 Balochistan Dera Bu…            25.7            16.7                44.6
+2  2013 KP          Tor Ghar            26.5            43.6                 0  
+3  2013 Punjab      Rajanpur            43.4            62.5                38.5
+4  2013 Sindh       Tando M…            38.5            45.8                56.6
+# ℹ 3 more variables: learning_score &lt;dbl&gt;, retention_score &lt;dbl&gt;,
+#   school_infrastructure_score &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## mutate to calculate score index based on all score variables</span></span>
+<span></span>
+<span><span class="va">edf_short</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>score_index<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'education_score'</span>,<span class="st">'retention_score'</span>,</span>
+<span>                                                             <span class="st">'gender_parity_score'</span>,</span>
+<span>                                                             <span class="st">'learning_score'</span> , <span class="st">'enrolment_score'</span>,</span>
+<span>                                                             <span class="st">'school_infrastructure_score'</span> <span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">-&gt;</span><span class="va">edf_short</span></span>
+<span></span>
+<span><span class="co">## Which district has lowest score index </span></span>
+<span><span class="va">edf_short</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">score_index</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2013</span>, <span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,</span>
+<span>                                                                                                                   <span class="st">"KP"</span>,<span class="st">"Balochistan"</span>, <span class="st">"Sindh"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 10
+# Groups:   province [4]
+   year province    district   score_index education_score enrolment_score
+  &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+1  2013 Balochistan Dera Bugti        24.9            25.7            16.7
+2  2013 KP          Tor Ghar          22.0            26.5            43.6
+3  2013 Punjab      Rajanpur          45.8            43.4            62.5
+4  2013 Sindh       Thatta            35.8            39.2            50.8
+# ℹ 4 more variables: gender_parity_score &lt;dbl&gt;, learning_score &lt;dbl&gt;,
+#   retention_score &lt;dbl&gt;, school_infrastructure_score &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">score_index</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2016</span>, <span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,</span>
+<span>                                                                                                               <span class="st">"KP"</span>,<span class="st">"Balochistan"</span>, <span class="st">"Sindh"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 10
+# Groups:   province [4]
+   year province    district score_index education_score enrolment_score
+  &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+1  2016 Balochistan Quetta          63.4            68.1            72.4
+2  2016 KP          Malakand        81.6            81.0            80.9
+3  2016 Punjab      Chakwal         86.4            84.8            88.9
+4  2016 Sindh       Karachi         71.0            72.2            73.7
+# ℹ 4 more variables: gender_parity_score &lt;dbl&gt;, learning_score &lt;dbl&gt;,
+#   retention_score &lt;dbl&gt;, school_infrastructure_score &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">score_index</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,</span>
+<span>                                                                                                               <span class="st">"KP"</span>,<span class="st">"Balochistan"</span>, <span class="st">"Sindh"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span>,<span class="va">year</span><span class="op">)</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 10
+# Groups:   province, year [16]
+    year province    district   score_index education_score enrolment_score
+   &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;            &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+ 1  2013 Balochistan Quetta            62.7            66.3            85.8
+ 2  2014 Balochistan Quetta            72.5            75.3            69.6
+ 3  2015 Balochistan Quetta            66.2            72.1            80.2
+ 4  2016 Balochistan Quetta            63.4            68.1            72.4
+ 5  2013 KP          Haripur           74.9            77.6            94.2
+ 6  2014 KP          Nowshera          75.5            73.6            88.2
+ 7  2015 KP          Haripur           81.6            84.0            97.3
+ 8  2016 KP          Malakand          81.6            81.0            80.9
+ 9  2013 Punjab      Chakwal           82.4            82.3            97.5
+10  2014 Punjab      Chakwal           86.4            85.0            78.1
+11  2015 Punjab      Rawalpindi        86.5            86.8            91.6
+12  2016 Punjab      Chakwal           86.4            84.8            88.9
+13  2013 Sindh       Karachi           63.7            63.4            82.5
+14  2014 Sindh       Hyderabad         75.7            75.9            72.2
+15  2015 Sindh       Karachi           72.4            72.5            85.2
+16  2016 Sindh       Karachi           71.0            72.2            73.7
+# ℹ 4 more variables: gender_parity_score &lt;dbl&gt;, learning_score &lt;dbl&gt;,
+#   retention_score &lt;dbl&gt;, school_infrastructure_score &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edf_short</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">score_index</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,</span>
+<span>                                                                                                   <span class="st">"KP"</span>,<span class="st">"Balochistan"</span>, <span class="st">"Sindh"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span>,<span class="va">year</span><span class="op">)</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 10
+# Groups:   province, year [16]
+    year province    district        score_index education_score enrolment_score
+   &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;                 &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+ 1  2013 Balochistan Dera Bugti             24.9            25.7           16.7 
+ 2  2014 Balochistan Dera Bugti             30.3            30.9            8.82
+ 3  2015 Balochistan Killa Abdullah         26.3            28.0           36.1 
+ 4  2016 Balochistan Dera Bugti             26.2            30.4           27.8 
+ 5  2013 KP          Tor Ghar               22.0            26.5           43.6 
+ 6  2014 KP          Kohistan               42.8            44.3           30.4 
+ 7  2015 KP          Kohistan               40.7            41.4           44.9 
+ 8  2016 KP          Kohistan               36.7            36.7           37.1 
+ 9  2013 Punjab      Rajanpur               45.8            43.4           62.5 
+10  2014 Punjab      Toba Tek Singh         60.9            55.2           53.1 
+11  2015 Punjab      Dera Ghazi Khan        51.1            49.4           75.7 
+12  2016 Punjab      Rajanpur               55.8            50.3           52.4 
+13  2013 Sindh       Thatta                 35.8            39.2           50.8 
+14  2014 Sindh       Badin                  50.6            52.5           37.2 
+15  2015 Sindh       Thatta                 40.8            43.9           45.7 
+16  2016 Sindh       Thatta                 38.5            42.2           37.2 
+# ℹ 4 more variables: gender_parity_score &lt;dbl&gt;, learning_score &lt;dbl&gt;,
+#   retention_score &lt;dbl&gt;, school_infrastructure_score &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section><section id="to-make-nice-tables-and-quick-summary" class="level3"><h3 class="anchored" data-anchor-id="to-make-nice-tables-and-quick-summary">To make nice tables and quick summary</h3>
+<div class="cell">
+<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/">gt</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ddsjoberg/gtsummary">gtsummary</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jthomasmock/gtExtras">gtExtras</a></span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">#edf_short |&gt; select(is.numeric, -year) |&gt; gt_plt_summary()</span></span>
+<span></span>
+<span><span class="va">edf_short</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">province</span>, <span class="va">district</span>, <span class="va">score_index</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2016</span>, <span class="va">province</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Punjab"</span>,<span class="st">"KP"</span>,<span class="st">"Balochistan"</span>, <span class="st">"Sindh"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">province</span><span class="op">)</span><span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">score_index</span><span class="op">)</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">table_scr</span> </span>
+<span><span class="va">table_scr</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 10
+# Groups:   province [4]
+   year province    district score_index education_score enrolment_score
+  &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;
+1  2016 Balochistan Quetta          63.4            68.1            72.4
+2  2016 KP          Malakand        81.6            81.0            80.9
+3  2016 Punjab      Chakwal         86.4            84.8            88.9
+4  2016 Sindh       Karachi         71.0            72.2            73.7
+# ℹ 4 more variables: gender_parity_score &lt;dbl&gt;, learning_score &lt;dbl&gt;,
+#   retention_score &lt;dbl&gt;, school_infrastructure_score &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">table_scr</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span>decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://jthomasmock.github.io/gtExtras/reference/gt_theme_nytimes.html">gt_theme_nytimes</a></span><span class="op">(</span><span class="op">)</span><span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/tab_header.html">tab_header</a></span><span class="op">(</span><span class="st">"Minimum education score (index based on score variable) in 2016"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/tab_footnote.html">tab_footnote</a></span><span class="op">(</span><span class="st">"source:alifailan, by Zahid Asghar"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="kdllvlokxf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#kdllvlokxf table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#kdllvlokxf thead, #kdllvlokxf tbody, #kdllvlokxf tfoot, #kdllvlokxf tr, #kdllvlokxf td, #kdllvlokxf th {
+  border-style: none;
+}
+
+#kdllvlokxf p {
+  margin: 0;
+  padding: 0;
+}
+
+#kdllvlokxf .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#kdllvlokxf .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#kdllvlokxf .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#kdllvlokxf .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#kdllvlokxf .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#kdllvlokxf .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#kdllvlokxf .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#kdllvlokxf .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#kdllvlokxf .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#kdllvlokxf .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#kdllvlokxf .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#kdllvlokxf .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#kdllvlokxf .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#kdllvlokxf .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#kdllvlokxf .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kdllvlokxf .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#kdllvlokxf .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#kdllvlokxf .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#kdllvlokxf .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kdllvlokxf .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#kdllvlokxf .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kdllvlokxf .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#kdllvlokxf .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#kdllvlokxf .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kdllvlokxf .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kdllvlokxf .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kdllvlokxf .gt_left {
+  text-align: left;
+}
+
+#kdllvlokxf .gt_center {
+  text-align: center;
+}
+
+#kdllvlokxf .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#kdllvlokxf .gt_font_normal {
+  font-weight: normal;
+}
+
+#kdllvlokxf .gt_font_bold {
+  font-weight: bold;
+}
+
+#kdllvlokxf .gt_font_italic {
+  font-style: italic;
+}
+
+#kdllvlokxf .gt_super {
+  font-size: 65%;
+}
+
+#kdllvlokxf .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#kdllvlokxf .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#kdllvlokxf .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#kdllvlokxf .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#kdllvlokxf .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#kdllvlokxf .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#kdllvlokxf .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading">
+<td colspan="8" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="font-family: 'Libre Franklin'; font-weight: 800;">Minimum education score (index based on score variable) in 2016</td>
+    </tr>
+<tr class="gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="district">district</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="score_index">score_index</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="education_score">education_score</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="enrolment_score">enrolment_score</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="gender_parity_score">gender_parity_score</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="learning_score">learning_score</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="retention_score">retention_score</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="school_infrastructure_score">school_infrastructure_score</th>
+    </tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="gt_group_heading_row">
+<th colspan="8" class="gt_group_heading" scope="colgroup" id="Balochistan">Balochistan</th>
+    </tr>
+<tr class="gt_row_group_first">
+<td headers="Balochistan  district" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">Quetta</td>
+<td headers="Balochistan  score_index" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">63.36</td>
+<td headers="Balochistan  education_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">68.09</td>
+<td headers="Balochistan  enrolment_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">72.39</td>
+<td headers="Balochistan  gender_parity_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">85.68</td>
+<td headers="Balochistan  learning_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">60.30</td>
+<td headers="Balochistan  retention_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">54.00</td>
+<td headers="Balochistan  school_infrastructure_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">39.71</td>
+</tr>
+<tr class="gt_group_heading_row">
+<th colspan="8" class="gt_group_heading" scope="colgroup" id="KP">KP</th>
+    </tr>
+<tr class="gt_row_group_first">
+<td headers="KP  district" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">Malakand</td>
+<td headers="KP  score_index" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">81.59</td>
+<td headers="KP  education_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">81.00</td>
+<td headers="KP  enrolment_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">80.89</td>
+<td headers="KP  gender_parity_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">97.48</td>
+<td headers="KP  learning_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">58.64</td>
+<td headers="KP  retention_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">87.00</td>
+<td headers="KP  school_infrastructure_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">84.51</td>
+</tr>
+<tr class="gt_group_heading_row">
+<th colspan="8" class="gt_group_heading" scope="colgroup" id="Punjab">Punjab</th>
+    </tr>
+<tr class="gt_row_group_first">
+<td headers="Punjab  district" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">Chakwal</td>
+<td headers="Punjab  score_index" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">86.41</td>
+<td headers="Punjab  education_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">84.85</td>
+<td headers="Punjab  enrolment_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">88.90</td>
+<td headers="Punjab  gender_parity_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">95.57</td>
+<td headers="Punjab  learning_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">66.23</td>
+<td headers="Punjab  retention_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">88.68</td>
+<td headers="Punjab  school_infrastructure_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">94.23</td>
+</tr>
+<tr class="gt_group_heading_row">
+<th colspan="8" class="gt_group_heading" scope="colgroup" id="Sindh">Sindh</th>
+    </tr>
+<tr class="gt_row_group_first">
+<td headers="Sindh  district" class="gt_row gt_left" style="font-family: 'Source Sans Pro'; font-weight: 400;">Karachi</td>
+<td headers="Sindh  score_index" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">70.96</td>
+<td headers="Sindh  education_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">72.18</td>
+<td headers="Sindh  enrolment_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">73.70</td>
+<td headers="Sindh  gender_parity_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">89.13</td>
+<td headers="Sindh  learning_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">67.90</td>
+<td headers="Sindh  retention_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">58.00</td>
+<td headers="Sindh  school_infrastructure_score" class="gt_row gt_right" style="font-family: 'Source Sans Pro'; font-weight: 400;">64.84</td>
+</tr>
+</tbody>
+<tfoot class="gt_footnotes"><tr>
+<td class="gt_footnote" colspan="8"> source:alifailan, by Zahid Asghar</td>
+    </tr></tfoot>
+</table>
+</div>
+</div>
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">countrypops</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">country_code_3</span>, <span class="va">year</span>, <span class="va">population</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">country_code_3</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"CHN"</span>, <span class="st">"IND"</span>, <span class="st">"USA"</span>, <span class="st">"PAK"</span>, <span class="st">"IDN"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;</span> <span class="fl">1975</span> <span class="op">&amp;</span> <span class="va">year</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">5</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">population</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">`2015`</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span>rowname_col <span class="op">=</span> <span class="st">"country_code_3"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span>suffixing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="hzjxvchhbb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hzjxvchhbb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hzjxvchhbb thead, #hzjxvchhbb tbody, #hzjxvchhbb tfoot, #hzjxvchhbb tr, #hzjxvchhbb td, #hzjxvchhbb th {
+  border-style: none;
+}
+
+#hzjxvchhbb p {
+  margin: 0;
+  padding: 0;
+}
+
+#hzjxvchhbb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hzjxvchhbb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hzjxvchhbb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hzjxvchhbb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hzjxvchhbb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hzjxvchhbb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hzjxvchhbb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hzjxvchhbb .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hzjxvchhbb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hzjxvchhbb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hzjxvchhbb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hzjxvchhbb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hzjxvchhbb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hzjxvchhbb .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hzjxvchhbb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hzjxvchhbb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hzjxvchhbb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hzjxvchhbb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hzjxvchhbb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hzjxvchhbb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hzjxvchhbb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hzjxvchhbb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hzjxvchhbb .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hzjxvchhbb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hzjxvchhbb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hzjxvchhbb .gt_left {
+  text-align: left;
+}
+
+#hzjxvchhbb .gt_center {
+  text-align: center;
+}
+
+#hzjxvchhbb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hzjxvchhbb .gt_font_normal {
+  font-weight: normal;
+}
+
+#hzjxvchhbb .gt_font_bold {
+  font-weight: bold;
+}
+
+#hzjxvchhbb .gt_font_italic {
+  font-style: italic;
+}
+
+#hzjxvchhbb .gt_super {
+  font-size: 65%;
+}
+
+#hzjxvchhbb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hzjxvchhbb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hzjxvchhbb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hzjxvchhbb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hzjxvchhbb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hzjxvchhbb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hzjxvchhbb .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1980">1980</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1985">1985</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1990">1990</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1995">1995</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2000">2000</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2005">2005</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2010">2010</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2015">2015</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2020">2020</th>
+    </tr></thead>
+<tbody class="gt_table_body">
+<tr>
+<th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">CHN</th>
+<td headers="stub_1_1 1980" class="gt_row gt_right">981.23M</td>
+<td headers="stub_1_1 1985" class="gt_row gt_right">1.05B</td>
+<td headers="stub_1_1 1990" class="gt_row gt_right">1.14B</td>
+<td headers="stub_1_1 1995" class="gt_row gt_right">1.20B</td>
+<td headers="stub_1_1 2000" class="gt_row gt_right">1.26B</td>
+<td headers="stub_1_1 2005" class="gt_row gt_right">1.30B</td>
+<td headers="stub_1_1 2010" class="gt_row gt_right">1.34B</td>
+<td headers="stub_1_1 2015" class="gt_row gt_right">1.38B</td>
+<td headers="stub_1_1 2020" class="gt_row gt_right">1.41B</td>
+</tr>
+<tr>
+<th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">IND</th>
+<td headers="stub_1_2 1980" class="gt_row gt_right">696.83M</td>
+<td headers="stub_1_2 1985" class="gt_row gt_right">780.24M</td>
+<td headers="stub_1_2 1990" class="gt_row gt_right">870.45M</td>
+<td headers="stub_1_2 1995" class="gt_row gt_right">964.28M</td>
+<td headers="stub_1_2 2000" class="gt_row gt_right">1.06B</td>
+<td headers="stub_1_2 2005" class="gt_row gt_right">1.15B</td>
+<td headers="stub_1_2 2010" class="gt_row gt_right">1.24B</td>
+<td headers="stub_1_2 2015" class="gt_row gt_right">1.32B</td>
+<td headers="stub_1_2 2020" class="gt_row gt_right">1.40B</td>
+</tr>
+<tr>
+<th id="stub_1_3" scope="row" class="gt_row gt_left gt_stub">USA</th>
+<td headers="stub_1_3 1980" class="gt_row gt_right">227.22M</td>
+<td headers="stub_1_3 1985" class="gt_row gt_right">237.92M</td>
+<td headers="stub_1_3 1990" class="gt_row gt_right">249.62M</td>
+<td headers="stub_1_3 1995" class="gt_row gt_right">266.28M</td>
+<td headers="stub_1_3 2000" class="gt_row gt_right">282.16M</td>
+<td headers="stub_1_3 2005" class="gt_row gt_right">295.52M</td>
+<td headers="stub_1_3 2010" class="gt_row gt_right">309.33M</td>
+<td headers="stub_1_3 2015" class="gt_row gt_right">320.74M</td>
+<td headers="stub_1_3 2020" class="gt_row gt_right">331.50M</td>
+</tr>
+<tr>
+<th id="stub_1_4" scope="row" class="gt_row gt_left gt_stub">IDN</th>
+<td headers="stub_1_4 1980" class="gt_row gt_right">148.18M</td>
+<td headers="stub_1_4 1985" class="gt_row gt_right">165.79M</td>
+<td headers="stub_1_4 1990" class="gt_row gt_right">182.16M</td>
+<td headers="stub_1_4 1995" class="gt_row gt_right">198.14M</td>
+<td headers="stub_1_4 2000" class="gt_row gt_right">214.07M</td>
+<td headers="stub_1_4 2005" class="gt_row gt_right">228.81M</td>
+<td headers="stub_1_4 2010" class="gt_row gt_right">244.02M</td>
+<td headers="stub_1_4 2015" class="gt_row gt_right">259.09M</td>
+<td headers="stub_1_4 2020" class="gt_row gt_right">271.86M</td>
+</tr>
+<tr>
+<th id="stub_1_5" scope="row" class="gt_row gt_left gt_stub">PAK</th>
+<td headers="stub_1_5 1980" class="gt_row gt_right">80.62M</td>
+<td headers="stub_1_5 1985" class="gt_row gt_right">97.12M</td>
+<td headers="stub_1_5 1990" class="gt_row gt_right">115.41M</td>
+<td headers="stub_1_5 1995" class="gt_row gt_right">133.12M</td>
+<td headers="stub_1_5 2000" class="gt_row gt_right">154.37M</td>
+<td headers="stub_1_5 2005" class="gt_row gt_right">174.37M</td>
+<td headers="stub_1_5 2010" class="gt_row gt_right">194.45M</td>
+<td headers="stub_1_5 2015" class="gt_row gt_right">210.97M</td>
+<td headers="stub_1_5 2020" class="gt_row gt_right">227.20M</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">countrypops</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">country_code_3</span>, <span class="va">year</span>, <span class="va">population</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">country_code_3</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"CHN"</span>, <span class="st">"IND"</span>, <span class="st">"USA"</span>, <span class="st">"PAK"</span>, <span class="st">"IDN"</span>, <span class="st">"BGD"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;</span> <span class="fl">1975</span> <span class="op">&amp;</span> <span class="va">year</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">5</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">population</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">`2015`</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span>rowname_col <span class="op">=</span> <span class="st">"country_code_3"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span>suffixing <span class="op">=</span> <span class="cn">TRUE</span>, n_sigfig <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://jthomasmock.github.io/gtExtras/reference/gt_highlight_rows.html">gt_highlight_rows</a></span><span class="op">(</span>rows <span class="op">=</span> <span class="fl">5</span>, fill<span class="op">=</span><span class="st">"red"</span>, font_weight <span class="op">=</span> <span class="st">"normal"</span><span class="op">)</span><span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/tab_header.html">tab_header</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Pakistan's population: the ticking bomb"</span>,</span>
+<span>             subtitle <span class="op">=</span><span class="st">"Had Pakistan observed Bangladesh population growth rate pattern, it would </span></span>
+<span><span class="st">             not have been left behind"</span> <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/tab_footnote.html">tab_footnote</a></span><span class="op">(</span><span class="st">"Source:https://data.worldbank.org/indicator/SP.POP.TOTL by: Zahid Asghar"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div id="jvxwhzxflm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jvxwhzxflm table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jvxwhzxflm thead, #jvxwhzxflm tbody, #jvxwhzxflm tfoot, #jvxwhzxflm tr, #jvxwhzxflm td, #jvxwhzxflm th {
+  border-style: none;
+}
+
+#jvxwhzxflm p {
+  margin: 0;
+  padding: 0;
+}
+
+#jvxwhzxflm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jvxwhzxflm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jvxwhzxflm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jvxwhzxflm .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jvxwhzxflm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jvxwhzxflm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jvxwhzxflm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jvxwhzxflm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jvxwhzxflm .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jvxwhzxflm .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jvxwhzxflm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jvxwhzxflm .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jvxwhzxflm .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jvxwhzxflm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jvxwhzxflm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jvxwhzxflm .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jvxwhzxflm .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jvxwhzxflm .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jvxwhzxflm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jvxwhzxflm .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jvxwhzxflm .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jvxwhzxflm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jvxwhzxflm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jvxwhzxflm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jvxwhzxflm .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jvxwhzxflm .gt_left {
+  text-align: left;
+}
+
+#jvxwhzxflm .gt_center {
+  text-align: center;
+}
+
+#jvxwhzxflm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jvxwhzxflm .gt_font_normal {
+  font-weight: normal;
+}
+
+#jvxwhzxflm .gt_font_bold {
+  font-weight: bold;
+}
+
+#jvxwhzxflm .gt_font_italic {
+  font-style: italic;
+}
+
+#jvxwhzxflm .gt_super {
+  font-size: 65%;
+}
+
+#jvxwhzxflm .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jvxwhzxflm .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jvxwhzxflm .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jvxwhzxflm .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jvxwhzxflm .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jvxwhzxflm .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jvxwhzxflm .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading">
+<td colspan="10" class="gt_heading gt_title gt_font_normal" style="">Pakistan's population: the ticking bomb</td>
+    </tr>
+<tr class="gt_heading">
+<td colspan="10" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">Had Pakistan observed Bangladesh population growth rate pattern, it would 
+             not have been left behind</td>
+    </tr>
+<tr class="gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1980">1980</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1985">1985</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1990">1990</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="1995">1995</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2000">2000</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2005">2005</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2010">2010</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2015">2015</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="2020">2020</th>
+    </tr>
+</thead>
+<tbody class="gt_table_body">
+<tr>
+<th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">CHN</th>
+<td headers="stub_1_1 1980" class="gt_row gt_right">981M</td>
+<td headers="stub_1_1 1985" class="gt_row gt_right">1.05B</td>
+<td headers="stub_1_1 1990" class="gt_row gt_right">1.14B</td>
+<td headers="stub_1_1 1995" class="gt_row gt_right">1.20B</td>
+<td headers="stub_1_1 2000" class="gt_row gt_right">1.26B</td>
+<td headers="stub_1_1 2005" class="gt_row gt_right">1.30B</td>
+<td headers="stub_1_1 2010" class="gt_row gt_right">1.34B</td>
+<td headers="stub_1_1 2015" class="gt_row gt_right">1.38B</td>
+<td headers="stub_1_1 2020" class="gt_row gt_right">1.41B</td>
+</tr>
+<tr>
+<th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">IND</th>
+<td headers="stub_1_2 1980" class="gt_row gt_right">697M</td>
+<td headers="stub_1_2 1985" class="gt_row gt_right">780M</td>
+<td headers="stub_1_2 1990" class="gt_row gt_right">870M</td>
+<td headers="stub_1_2 1995" class="gt_row gt_right">964M</td>
+<td headers="stub_1_2 2000" class="gt_row gt_right">1.06B</td>
+<td headers="stub_1_2 2005" class="gt_row gt_right">1.15B</td>
+<td headers="stub_1_2 2010" class="gt_row gt_right">1.24B</td>
+<td headers="stub_1_2 2015" class="gt_row gt_right">1.32B</td>
+<td headers="stub_1_2 2020" class="gt_row gt_right">1.40B</td>
+</tr>
+<tr>
+<th id="stub_1_3" scope="row" class="gt_row gt_left gt_stub">USA</th>
+<td headers="stub_1_3 1980" class="gt_row gt_right">227M</td>
+<td headers="stub_1_3 1985" class="gt_row gt_right">238M</td>
+<td headers="stub_1_3 1990" class="gt_row gt_right">250M</td>
+<td headers="stub_1_3 1995" class="gt_row gt_right">266M</td>
+<td headers="stub_1_3 2000" class="gt_row gt_right">282M</td>
+<td headers="stub_1_3 2005" class="gt_row gt_right">296M</td>
+<td headers="stub_1_3 2010" class="gt_row gt_right">309M</td>
+<td headers="stub_1_3 2015" class="gt_row gt_right">321M</td>
+<td headers="stub_1_3 2020" class="gt_row gt_right">332M</td>
+</tr>
+<tr>
+<th id="stub_1_4" scope="row" class="gt_row gt_left gt_stub">IDN</th>
+<td headers="stub_1_4 1980" class="gt_row gt_right">148M</td>
+<td headers="stub_1_4 1985" class="gt_row gt_right">166M</td>
+<td headers="stub_1_4 1990" class="gt_row gt_right">182M</td>
+<td headers="stub_1_4 1995" class="gt_row gt_right">198M</td>
+<td headers="stub_1_4 2000" class="gt_row gt_right">214M</td>
+<td headers="stub_1_4 2005" class="gt_row gt_right">229M</td>
+<td headers="stub_1_4 2010" class="gt_row gt_right">244M</td>
+<td headers="stub_1_4 2015" class="gt_row gt_right">259M</td>
+<td headers="stub_1_4 2020" class="gt_row gt_right">272M</td>
+</tr>
+<tr>
+<th id="stub_1_5" scope="row" class="gt_row gt_left gt_stub">PAK</th>
+<td headers="stub_1_5 1980" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">80.6M</td>
+<td headers="stub_1_5 1985" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">97.1M</td>
+<td headers="stub_1_5 1990" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">115M</td>
+<td headers="stub_1_5 1995" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">133M</td>
+<td headers="stub_1_5 2000" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">154M</td>
+<td headers="stub_1_5 2005" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">174M</td>
+<td headers="stub_1_5 2010" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">194M</td>
+<td headers="stub_1_5 2015" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">211M</td>
+<td headers="stub_1_5 2020" class="gt_row gt_right" style="background-color: rgba(255,0,0,0.8); color: #000000; font-weight: normal;">227M</td>
+</tr>
+<tr>
+<th id="stub_1_6" scope="row" class="gt_row gt_left gt_stub">BGD</th>
+<td headers="stub_1_6 1980" class="gt_row gt_right">83.9M</td>
+<td headers="stub_1_6 1985" class="gt_row gt_right">96.0M</td>
+<td headers="stub_1_6 1990" class="gt_row gt_right">107M</td>
+<td headers="stub_1_6 1995" class="gt_row gt_right">118M</td>
+<td headers="stub_1_6 2000" class="gt_row gt_right">129M</td>
+<td headers="stub_1_6 2005" class="gt_row gt_right">141M</td>
+<td headers="stub_1_6 2010" class="gt_row gt_right">148M</td>
+<td headers="stub_1_6 2015" class="gt_row gt_right">158M</td>
+<td headers="stub_1_6 2020" class="gt_row gt_right">167M</td>
+</tr>
+</tbody>
+<tfoot class="gt_footnotes"><tr>
+<td class="gt_footnote" colspan="10"> Source:https://data.worldbank.org/indicator/SP.POP.TOTL by: Zahid Asghar</td>
+    </tr></tfoot>
+</table>
+</div>
+</div>
+</div>
+</section></section></main><!-- /main column --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
