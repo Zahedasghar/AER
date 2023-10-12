@@ -1,5 +1,5 @@
 ---
-title: " dplyr 5 verbs for data wrangling"
+title: " [5 verbs for data wrangling]{.flow}"
 author: "Zahid Asghar"
 format: 
   html:
